@@ -19,6 +19,8 @@ maxLatency = 100e-3 # 100ms
 doFiltering = True
 filteringTolerance = 8
 
+PPM_Period = 22e-3
+
 
 
 def connectToArduino():
@@ -98,7 +100,7 @@ def readRCreceiver(ser, joy):
 	buffer = ""
 
 	dataSize = numChannels + 1 # 1: sep = '\xff'
-	maxBuffer = math.ceil(dataSize * maxLatency/20e-3)
+	maxBuffer = math.ceil(dataSize * maxLatency/PPM_Period)
 
 	while True:
 		if ser.inWaiting() > maxBuffer:
@@ -133,7 +135,7 @@ def processData(data):
 		if data[i] >= 253:
 			data[i] = 255
 		#unf[i] = data[i]
-		# Filtering of arduinos timing granularity at a frequency of 50Hz
+		# Filtering of arduinos timing granularity at a frequency of about 45Hz
 		if doFiltering:
 			if holdLastData[i]:
 				holdLastData[i] = (data[i] == lastData[i])
@@ -180,7 +182,7 @@ def main():
 		#packetCounter = len(debugData.split("\xff")) # TODO: remove this
 		if joy:
 			#print "Time of CPU:", endTime - startTime # TODO: remove this
-			expectedNbPackets = (endTime-startTime) / 20e-3
+			expectedNbPackets = (endTime-startTime) / PPM_Period
 			print ("%s packets captured (%s%%)" % (packetCounter, int(100 * packetCounter/expectedNbPackets)))
 		
 		print ("Connections closed.")
