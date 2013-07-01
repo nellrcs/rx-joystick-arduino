@@ -1,0 +1,15 @@
+#summary An example of using a Futaba R142JE (2 channel receiver) to play Re-Volt (rc race game)
+#labels Phase-Deploy,Featured
+TODO
+
+= Introduction =
+
+Add your content here.
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
