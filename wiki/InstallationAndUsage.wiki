@@ -1,14 +1,32 @@
 #summary Installation and Usage
 #labels Featured,Phase-Requirements,Phase-Design
-= Hardware =
 
-TODO
-Add your content here.
+An example is provides in the "Example" wiki.
 
 
-= Software =
+= Setup =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+This has to be done only once.
+
+== Hardware ==
+
+=== Required components ===
+
+  # Arduino, with an USB cable
+Almost all Arduinos are valid, except some small-scale editions, such as the Mini, Micro or Nano, if my RC Receiver Shield is used.
+  # RC receiver, with the corresponding transmitter and some extension rc connector cables
+With some newer receiver models, it may not work using the Channel output ports, and may only work using a PPM signal port, if provided.
+  # Optional but recommended: Arduino RC Receiver Shield (see "RCReceiverShield" wiki)
+If not used, you can manually connect the receiver with the Arduino, as done in the "Example" wiki.
+All files (created with Fritzing) needed to produce the PCB can be found in the "/Hardware/RCReceiverShield/" folder.
+
+== Software ==
+
+
+= Usage =
+
+== Hardware ==
+
+
+
+== Software ==
