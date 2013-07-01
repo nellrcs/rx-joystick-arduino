@@ -22,6 +22,10 @@ This has to be done only once.
   If not used, you can manually connect the receiver with the Arduino, as done in the "Example" wiki.
   All files (created with Fritzing) needed to produce the PCB can be found in the "/Hardware/RCReceiverShield/" folder.
 
+=== Connections ===
+
+
+
 == Software ==
 
 
