@@ -4,5 +4,5 @@
   * Implement PPM reading from BAT signal port on receiver or DSC port on transmitter (Arduino side)
 This has not been done yet because my receivers don't output PPM on the BAT signal port (instead, it is connected to the ground), and I have no DSC cable.
   * Add command-line arguments (computer side)
-  * Test with more receivers (currently tested with Graupner JR R700 and Futaba )
+  * Test with more receivers (currently tested with Graupner JR R700 and Futaba R142JE)
   * Add a joystick description file for some games, for example for Flightgear.
