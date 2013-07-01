@@ -1,4 +1,5 @@
 #summary Installation and Usage
+#labels Featured,Phase-Requirements,Phase-Design
 = Hardware =
 
 TODO
