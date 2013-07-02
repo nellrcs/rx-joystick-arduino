@@ -27,9 +27,10 @@ This has to be done only once.
 
   * Optional, only if you use the RC Receiver Shield: push this shield on the Arduino.
   * Connect the RC receiver with the Arduino (or with the RC Receiver Shield if you have one) using extension RC connector cables.
-  *Warning*: if you are using the RC Receiver Shield, it is important that you choose to use either the "Ch#" input ports *OR* the "BAT" input port (PPM signal), and correspondingly you have to put the switch to either "CHs/PWM" or "BAT/PPM".
+ ` `*Warning*: if you are using the RC Receiver Shield, it is important that you choose to use either the "Ch#" input ports *OR* the "BAT" input port (PPM signal), and correspondingly you have to put the switch to either "CHs/PWM" or "BAT/PPM".
+
+  * Make sure all your connections are well-done, so that there can't be any short-circuit.
   * Connect the Arduino with your computer using the USB cable.
-  * Make sure all your connections are well-done, so that there can't be any short-circuit. 
 
 == Software ==
 
