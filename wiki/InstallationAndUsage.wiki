@@ -18,7 +18,7 @@ This has to be done only once.
   * RC receiver, with the corresponding transmitter and some extension rc connector cables
   With some newer receiver models, it may not work using the Channel output ports, and may only work using a PPM signal port, if provided.
 
-  * Optional but recommended: Arduino RC Receiver Shield (see "RCReceiverShield" wiki)
+  * Optional but recommended: Arduino RC Receiver Shield (see [RCReceiverShield RC Receiver Shield wiki])
   If not used, you can manually connect the receiver with the Arduino, as done in the "Example" wiki.
   All files (created with Fritzing) needed to produce the PCB can be found in the "/Hardware/RCReceiverShield/" folder.
 
