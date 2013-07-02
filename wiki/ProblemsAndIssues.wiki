@@ -1,7 +1,5 @@
-#summary Some possible problems and FAQ
+#summary FAQ and some possible problems
 #labels Phase-Support
-TODO
-
 
 === "My RC receiver has more than 8 output channels." ===
 
