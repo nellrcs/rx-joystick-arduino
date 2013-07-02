@@ -2,11 +2,11 @@
 #labels Phase-Implementation
 
   * Implement PPM reading from BAT signal port on receiver or DSC port on transmitter (Arduino side)
-This has not been done yet because my receivers don't output PPM on the BAT signal port (instead, it is connected to the ground), and I have no DSC cable.
+  This has not been done yet because my receivers don't output PPM on the BAT signal port (instead, it is connected to the ground), and I have no DSC cable.
   * Add command-line arguments (computer side)
-  * Make the Arduino detection platform independent
-Currently this works only on Linux, it may also work on MacOs, but that is not tested. 
   * Create a verbose dummy class for the virtual joystick if the python `uinput` module is not found
-This can also serve as a starting point for the implementation on operating systems that do not use uinput (like MacOs or Windows).
+  This can also serve as a starting point for the implementation on operating systems that do not use uinput (like MacOs or Windows).
+  * Make the automatic Arduino detection platform independent
+  Currently this works only on Linux, it may also work on MacOs, but that is not tested.
   * Test with more receivers (currently tested with Graupner JR R700 and Futaba R142JE)
-  * Add a joystick description file for some games, for example for Flightgear.
+  * Add a joystick configuration file for some games, for example for Flightgear.
