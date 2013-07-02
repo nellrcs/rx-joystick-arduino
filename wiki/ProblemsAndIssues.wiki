@@ -1,15 +1,36 @@
-#summary Some possible problems
+#summary Some possible problems and FAQ
 #labels Phase-Support
 TODO
 
-= Introduction =
 
-Add your content here.
+=== "My RC receiver has more than 8 output channels." ===
+
+This maximum amount is chosen because the big majority of RC receivers has this amount or less, and then the size and complexity of the RC Receiver Shield remains feasible for DIY purposes. 
+
+However, it is technically possible to extend the code on the Arduino-side, computer-side and the RC Receiver Shield hardware, to meet stronger requirements.
+
+But there is a limit:
+each channel signal is directly derived from the (internal) PPM signal, which allocates a maximum time of about 2ms (can be even more) and the total PPM period is about 22ms. Keep in mind that on the end of the PPM signal, a sync signal of at least 4ms is needed. That makes a total of (22-4)ms / 2ms = 9 channels. However other modulation techniques/parameters may increase this amount.
 
 
-= Details =
+=== "Everything is set up right, but the computer can't connect with the RC Receiver." ===
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+Sometimes this problem can be solved by trying to rerun the command.
+
+This can occur when a valid serial(-USB) connection is set up with the Arduino, but the handshake after connection establishment times out.
+You may have to increase the `timeout` variable at the Serial object construction in the "serialToJoystick.py" file.
+
+
+=== "Arduino autodetection does not work." ===
+
+The code handling this part is strongly platform dependent (should change in the future).
+Therefore, if it fails, you can manually specify the device-name as an argument in the command-line.
+
+
+=== "If all controls are set to mid-position (or hold steady), there are small alternating variations superposed on the constant output value." ===
+
+
+=== "I'm correctly using my receiver's PPM port, but the virtual joystick does not report valid values." ===
+
+The code on the Arduino side supporting PPM input, is not yet implemented: I don't have a receiver with PPM output I can test with.
+But if someone has, please mail me if you're interested to contribute some code on that.
