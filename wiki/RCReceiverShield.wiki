@@ -5,8 +5,9 @@
 
 This page contains information to create an Arduino shield connecting the Arduino with the RC receiver.
 There are two editions of this shield: one with the battery connector coming first, the other with the battery connector coming last.
-Gerber files are provided to produce the PCB.
+You can choose which one you take, but it's best to take a look at your receiver and use the same order, in this way the connector cables all have about the same length.
 
+Gerber files are provided to produce the PCB.
 The components to be placed on the PCB are listed in "/Hardware/RCReceiverShield/PCB_bom.html".
 
 The design places all routes on the bottom of the PCB, (there are no VIAs used,) however double sided print is still needed to solder the Arduino headers. Through-hole metallisation is recommended for the drills of the Arduino headers, but if you're unable to do that, you can let those headers rise a bit and solder them on both sides (, which happened to me).
