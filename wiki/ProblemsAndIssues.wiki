@@ -29,6 +29,14 @@ Therefore, if it fails, you can manually specify the device-name as an argument 
 
 === "If all controls are set to mid-position (or hold steady), there are small alternating variations superposed on the constant output value." ===
 
+This is caused by the timing resolution of the Arduino, which is 4us on the 16 MHz editions, and 8us on the 8 Mhz editions.
+
+To address this problem, a non-linear low-pass filter is used, that acts as a linear low-pass filter when the position of the controls is not changed.
+This filter filters noise situated at the sampling frequency.
+
+This delivers better results, but as this phenomenon is really quantization noise (present at all (relevant) frequencies), there is still some noise.
+This can be solved by extending the filter to also affect lower frequencies, but be aware that this might have bad effects on the dynamic response.
+
 
 === "I'm correctly using my receiver's PPM port, but the virtual joystick does not report valid values." ===
 
