@@ -14,14 +14,14 @@ The design places all routes on the bottom of the PCB, (there are no VIAs used,)
 
 The software used to create all material is Fritzing 7.12 (open-source).
 
+=== Schematic ===
+
+[http://rx-joystick-arduino.googlecode.com/svn/trunk/Hardware/RCReceiverShield/batteryLastConnector/pictures/PCB_schema.png]
+
 
 = "Battery connector coming first" edition =
 
 Files are located at "/Hardware/RCReceiverShield/batteryFirstConnector/".
-
-=== Schematic ===
-
-[http://rx-joystick-arduino.googlecode.com/svn/trunk/Hardware/RCReceiverShield/batteryFirstConnector/pictures/PCB_schema.png]
 
 === PCB ===
 
@@ -33,10 +33,6 @@ Bottom and Top:
 = "Battery connector coming last" edition =
 
 Files are located at "/Hardware/RCReceiverShield/batteryLastConnector/".
-
-=== Schematic ===
-
-[http://rx-joystick-arduino.googlecode.com/svn/trunk/Hardware/RCReceiverShield/batteryLastConnector/pictures/PCB_schema.png]
 
 === PCB ===
 
