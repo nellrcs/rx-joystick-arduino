@@ -10,5 +10,6 @@
   Currently this works only on Linux, it may also work on MacOs, but that is not tested.
   * Test with more receivers (currently tested with Graupner JR R700 and Futaba R142JE)
   * Add a joystick configuration file for some games, for example for Flightgear.
+  * Improve the quantization noise filter.
   * Improve performance on the computer-side
   On an Intel i5, the program uses 5% of one cpu core, which is much IMO, given that the functions used of the python `serial` module are interrupt-based.
