@@ -1,6 +1,15 @@
 #summary FAQ and some possible problems
 #labels Phase-Support
 
+=== "The extension RC connector cables don't fit in the headers of the RC Receiver Shield." ===
+
+First ensure the (female) headers are all soldered in place, that should make the following task easier.
+Then, for each header, use a knife to chop off two corners of one side.
+
+*It is important that you choose the right side:*
+This side is shown of the PCB images on the [RCReceiverShield RC Receiver Shield wiki].
+
+
 === "My RC receiver has more than 8 output channels." ===
 
 This maximum amount is chosen because the big majority of RC receivers has this amount or less, and then the size and complexity of the RC Receiver Shield remains feasible for DIY purposes. 
@@ -22,18 +31,19 @@ You may have to increase the `timeout` variable at the Serial object constructio
 === "Arduino autodetection does not work." ===
 
 The code handling this part is strongly platform dependent (should change in the future).
-Therefore, if it fails, you can manually specify the device-name as an argument in the command-line.
+
+You can solve this by manually specifying the device-name as an argument in the command-line.
 
 
 === "If all controls are set to mid-position (or hold steady), there are small alternating variations superposed on the constant output value." ===
 
-This is caused by the timing resolution of the Arduino, which is 4us on the 16 MHz editions, and 8us on the 8 Mhz editions.
+This is caused by the timing resolution (granularity => quantization noise) of the Arduino, which is 4us on the 16 MHz editions, and 8us on the 8 Mhz editions. The inverse of this time gives the sampling frequency.
 
 To address this problem, a non-linear low-pass filter is used, that acts as a linear low-pass filter when the position of the controls is not changed.
 This filter filters noise situated at the sampling frequency.
 
-This delivers better results, but as this phenomenon is really quantization noise (present at all (relevant) frequencies), there is still some noise.
-This can be solved by extending the filter to also affect lower frequencies, but be aware that this might have bad effects on the dynamic response.
+This delivers better results, but as this phenomenon is really quantization noise (present at all (relevant) frequencies), there is still some noise left.
+This can be solved by extending the filter to also affect lower frequencies, but be aware that this might have bad effects on the dynamic response (e.g. delay).
 
 
 === "I'm correctly using my receiver's PPM port, but the virtual joystick does not report valid values." ===
