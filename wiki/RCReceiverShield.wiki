@@ -1,0 +1,11 @@
+#summary Arduino RC Receiver Shield
+
+= Introduction =
+
+This page contains information to create an Arduino shield connecting the Arduino with the RC receiver.
+There are two editions of this shield: one with the battery connector coming first, the other with the battery connector coming last.
+The design places all routes on the bottom of the PCB, (there are no VIAs used,) however double sided print is still needed to solder the Arduino headers. Through-hole metallisation is recommended for the drills of the Arduino headers, but if you're unable to do that, you can let those headers rise a bit and solder them on both sides (, which happened to me).
+
+= "Battery connector coming first" edition =
+
+= "Battery connector coming last" edition =
