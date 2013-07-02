@@ -10,7 +10,7 @@ You can choose which one you take, but it's best to take a look at your receiver
 Gerber files are provided to produce the PCB.
 The components to be placed on the PCB are listed in "/Hardware/RCReceiverShield/PCB_bom.html".
 
-The design places all routes on the bottom of the PCB, (there are no VIAs used,) however double sided print is still needed to solder the Arduino headers. Through-hole metallisation is recommended for the drills of the Arduino headers, but if you're unable to do that, first solder the header in place like you would normally do, then pull the plastic header socket off the pins, then solder the other side (the solder layer on every pin should have the same thickness), afterwards push the plastic header socket back down until it reaches the solder layer.
+The design places all routes on the bottom of the PCB, (there are no VIAs used,) however double sided print is still needed to solder the Arduino headers. Through-hole metallisation is recommended for the drills of the Arduino headers, but if you're unable to do that, first solder the header in place like you would normally do, then pull the plastic header socket off the pins, afterwards solder the other side (the solder layer on every pin should have the same thickness), finally push the plastic header socket back in place until it reaches the solder layer.
 
 The software used to create all material is Fritzing 7.12 (open-source).
 
