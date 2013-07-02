@@ -2,7 +2,7 @@
 #labels Featured,Phase-Requirements,Phase-Design
 TODO
 
-An example is provides in the "Example" wiki.
+For an example, look at the [Example Example wiki].
 
 
 = Setup =
@@ -27,10 +27,19 @@ This has to be done only once.
 
 ==== Without RC Receiver Shield ====
 
-  * Connect the RC receiver with the Arduino using extension RC connector cables
-  How: bla bla bla
+  * Connect the RC receiver with the Arduino using extension RC connector cables:
+    # Connect the `ground` of each RC header (middle pin, usually with a dark coloured wire) with (one of) the Arduino's "ground" pin(s).
+    # Connect the `Vcc` of each RC header (one of the extreme pins, usually with a red coloured wire) with the Arduino's "5V" pin.
+    # Connect the `signal` output of each RC header (the other extreme pin, usually with a light coloured wire) with the Arduino's "D#" (digital) pin, where "#" is equal to `<the sequence number of the next utilised RC header (in order)> + 1` (given that the sequence numbers start with number "1").
 
   * Make sure all your connections are well-done, so that there can't be any short-circuit.
+
+_Example_:
+
+[http://rx-joystick-arduino.googlecode.com/svn/trunk/Hardware/ConceptTestSetup/setup.png]
+
+[http://rx-joystick-arduino.googlecode.com/svn/trunk/Hardware/ConceptTestSetup/setup_real.jpg]
+[http://rx-joystick-arduino.googlecode.com/svn/trunk/Hardware/ConceptTestSetup/setup_real_zoom.jpg]
 
 ==== With RC Receiver Shield ====
 
