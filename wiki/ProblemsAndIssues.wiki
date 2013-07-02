@@ -5,7 +5,6 @@
 
 First ensure the (female) headers are all soldered in place, that should make the following task easier.
 Then, for each header, use a knife to chop off two corners of one side.
-
 *It is important that you choose the right side:*
 This side is shown of the PCB images on the [RCReceiverShield RC Receiver Shield wiki].
 
