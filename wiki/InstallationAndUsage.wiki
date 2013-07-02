@@ -14,18 +14,22 @@ This has to be done only once.
 === Required components ===
 
   * Arduino, with an USB cable
-  Almost all Arduinos are valid, except some small-scale editions, such as the Mini, Micro or Nano, if my RC Receiver Shield is used.
+  Almost all Arduinos are valid, except if the [RCReceiverShield RC Receiver Shield] is used, some small-scale editions won't fit, such as the Mini, Micro or Nano.
 
-  * RC receiver, with the corresponding transmitter and some extension rc connector cables
+  * RC receiver, with the corresponding transmitter and some extension RC connector cables
   With some newer receiver models, it may not work using the Channel output ports, and may only work using a PPM signal port, if provided.
+  If you don't have any extension RC connector cables, you can make one by cutting and stripping the cable of an old/broken servo.
 
-  * Optional but recommended: Arduino RC Receiver Shield (see [RCReceiverShield RC Receiver Shield wiki])
-  If not used, you can manually connect the receiver with the Arduino, as done in the "Example" wiki.
-  All files (created with Fritzing) needed to produce the PCB can be found in the "/Hardware/RCReceiverShield/" folder.
+  * Optional but recommended: [RCReceiverShield Arduino RC Receiver Shield wiki]
+  If not used, you can manually connect the receiver with the Arduino, as done in the [Example Example wiki].
 
 === Connections ===
 
-
+  * Optional, only if you use the RC Receiver Shield: push this shield on the Arduino.
+  * Connect the RC receiver with the Arduino (or with the RC Receiver Shield if you have one) using extension RC connector cables.
+  *Warning*: if you are using the RC Receiver Shield, it is important that you choose to use either the "Ch#" input ports *OR* the "BAT" input port (PPM signal), and correspondingly you have to put the switch to either "CHs/PWM" or "BAT/PPM".
+  * Connect the Arduino with your computer using the USB cable.
+  * Make sure all your connections are well-done, so that there can't be any short-circuit. 
 
 == Software ==
 
