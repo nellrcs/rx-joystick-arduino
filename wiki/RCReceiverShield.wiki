@@ -5,7 +5,7 @@
 
 This page contains information to create an Arduino shield connecting the Arduino with the RC receiver.
 There are two editions of this shield: one with the battery connector coming first, the other with the battery connector coming last.
-You can choose which one you take, but it's best to take a look at your receiver and use the same order, in this way the connector cables all have about the same length.
+You can choose which one you take, but it's best to take a look at your receiver and use that order, in this way the connector cables will all have about the same length.
 
 The software used to create all material is Fritzing 7.12 (open-source).
 
