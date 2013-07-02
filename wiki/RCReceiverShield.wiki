@@ -20,7 +20,7 @@ Files are located at "/Hardware/RCReceiverShield/batteryFirstConnector/".
 
 === Schematic ===
 
-[http://rx-joystick-arduino.googlecode.com/svn/trunk/Hardware/RCReceiverShield/batteryFirstConnector/pictures/PCB_schema.svg]
+[http://rx-joystick-arduino.googlecode.com/svn/trunk/Hardware/RCReceiverShield/batteryFirstConnector/pictures/PCB_schema.png]
 
 === PCB ===
 
@@ -35,7 +35,7 @@ Files are located at "/Hardware/RCReceiverShield/batteryLastConnector/".
 
 === Schematic ===
 
-[http://rx-joystick-arduino.googlecode.com/svn/trunk/Hardware/RCReceiverShield/batteryLastConnector/pictures/PCB_schema.svg]
+[http://rx-joystick-arduino.googlecode.com/svn/trunk/Hardware/RCReceiverShield/batteryLastConnector/pictures/PCB_schema.png]
 
 === PCB ===
 
