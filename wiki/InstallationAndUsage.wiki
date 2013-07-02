@@ -13,7 +13,7 @@ This has to be done only once.
 
 === Required components ===
 
-  * Arduino, with an USB cable
+  * [http://arduino.cc/en/Main/Products Arduino], with an USB cable
   Almost all Arduinos are valid, except if the [RCReceiverShield RC Receiver Shield] is used, some small-scale editions won't fit, such as the Mini, Micro or Nano.
 
   * RC receiver, with the corresponding transmitter and some extension RC connector cables
@@ -42,11 +42,22 @@ This has to be done only once.
 
 === Arduino side ===
 
+  * Get the latest [http://arduino.cc/en/Main/Software Arduino software] (your distribution may even have packaged it). This will be used to compile code and flash it on the Arduino's microprocessor.
+  * Connect the Arduino with your computer using the USB cable.
+  * Open the installed program and load the file "`RC_receiver.ino`" located at "/Software/Arduino/".
+  * Click on the upload icon. If all went right, the program should report:
+{{{
+Upload succeeded.
+}}}
+
 === Computer side ===
 
-  * python
-  * pyserial
-  * 
+Make sure the following dependencies are installed on your computer:
+ 
+  * [http://www.python.org/download/ python]
+  * [http://pypi.python.org/pypi/pyserial pyserial]
+  * [http://pypi.python.org/pypi/python-uinput python-uinput]
+  This last one only works on Linux, in the future a dummy class will be made to print all received controls, if the python `uinput` module is not found.
 
 
 = Usage =
@@ -58,7 +69,7 @@ This has to be done only once.
 
 == Software ==
 
-  * Execute the "serialToJoystick.py" program with the appropriate command-line arguments (*TODO*), e.g. by running 
+  * Execute the `serialToJoystick.py` (located at "/Software/Computer/") program with the appropriate command-line arguments (*TODO*), e.g. by running 
 {{{
 python serialToJoystick.py
 }}}
