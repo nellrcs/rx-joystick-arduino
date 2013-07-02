@@ -1,6 +1,5 @@
 #summary Installation and Usage
 #labels Featured,Phase-Requirements,Phase-Design
-TODO
 
 For an example, look at the [Example Example wiki].
 
