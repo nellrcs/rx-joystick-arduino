@@ -1,6 +1,8 @@
 #summary Arduino RC Receiver Shield
 #labels Phase-Requirements,Phase-Deploy
 
+= Warning, there is a polarity fault in this section, it will be directly updated!
+
 = Introduction =
 
 This page contains information to create an Arduino shield connecting the Arduino with the RC receiver.
