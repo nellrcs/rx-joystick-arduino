@@ -58,8 +58,8 @@
      showgrid="false"
      inkscape:snap-bbox="false"
      inkscape:zoom="0.59"
-     inkscape:cx="89.3"
-     inkscape:cy="449.76909"
+     inkscape:cx="177.91084"
+     inkscape:cy="584.88334"
      inkscape:window-x="-2"
      inkscape:window-y="-3"
      inkscape:window-maximized="1"
@@ -792,114 +792,6 @@
     </g>
   </g>
   <g
-     partID="64890"
-     id="g453"
-     inkscape:export-filename="/home/elias/Programs/Arduino/rx-joystick-arduino/Hardware/RCReceiverShield/batteryLastConnector/pictures/PCB_schema.png"
-     inkscape:export-xdpi="72"
-     inkscape:export-ydpi="72">
-    <g
-       transform="translate(463.836,682.56)"
-       id="g455">
-      <g
-         id="g457">
-        <path
-           stroke-opacity="1"
-           fill="#000000"
-           stroke="none"
-           style="opacity:1;fill-rule:nonzero;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;"
-           fill-opacity="1"
-           id="path2400"
-           stroke-width="1.6"
-           d="M5.6834,16A1.6834,1.6834,0,1,1,2.3166,16A1.6834,1.6834,0,1,1,5.6834,16z" />
-        <line
-           fill="none"
-           stroke="#000000"
-           style="stroke-linecap:round"
-           id="line2398"
-           y1="0.986303"
-           y2="15.4311"
-           x1="4"
-           stroke-width="1.78272"
-           x2="4" />
-        <line
-           fill="none"
-           stroke="#000000"
-           stroke-linecap="round"
-           id="line14"
-           y1="35.2048"
-           stroke-width="1.78272"
-           x1="13.2624"
-           y2="49.528"
-           x2="13.2624" />
-        <line
-           fill="none"
-           stroke="#000000"
-           style="stroke-linecap:round"
-           id="line18"
-           y1="35.2048"
-           x1="13.2624"
-           y2="17.036"
-           stroke-width="1.76"
-           x2="6.8" />
-        <path
-           stroke-opacity="1"
-           fill="#000000"
-           stroke="none"
-           style="opacity:1;fill-rule:nonzero;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;"
-           fill-opacity="1"
-           id="path2402"
-           stroke-width="1.6"
-           d="M21.6834,16A1.6834,1.6834,0,1,1,18.3166,16A1.6834,1.6834,0,1,1,21.6834,16z" />
-        <g
-           width="0.6936"
-           x="12.9024"
-           y="49.7048"
-           height="0.5488"
-           id="g464" />
-        <rect
-           width="1.5144"
-           x="12.5192"
-           y="41.9344"
-           height="7.8248"
-           id="rect466" />
-        <g
-           width="0.6936"
-           x="3.6"
-           y="0.8136"
-           height="0.5472"
-           id="g468" />
-        <g
-           width="0.6936"
-           x="19.6"
-           y="0.8136"
-           height="0.5472"
-           id="g470" />
-        <rect
-           width="1.5144"
-           x="19.2"
-           y="1.36"
-           height="7.8264"
-           id="rect472" />
-        <line
-           fill="none"
-           stroke="#000000"
-           style="stroke-linecap:round"
-           id="line16"
-           y1="0.986303"
-           x1="20"
-           y2="15.4311"
-           stroke-width="1.78272"
-           x2="20" />
-        <rect
-           width="1.5144"
-           x="3.2"
-           y="1.36"
-           height="7.8264"
-           id="rect475" />
-      </g>
-    </g>
-  </g>
-  <g
      partID="113590"
      id="g477"
      inkscape:export-filename="/home/elias/Programs/Arduino/rx-joystick-arduino/Hardware/RCReceiverShield/batteryLastConnector/pictures/PCB_schema.png"
@@ -1048,17 +940,6 @@
        x2="425.805"
        id="line520" />
   </g>
-  <circle
-     fill="black"
-     cx="425.805"
-     cy="173.851"
-     stroke="none"
-     r="3.6"
-     stroke-width="0"
-     id="circle522"
-     inkscape:export-filename="/home/elias/Programs/Arduino/rx-joystick-arduino/Hardware/RCReceiverShield/batteryLastConnector/pictures/PCB_schema.png"
-     inkscape:export-xdpi="72"
-     inkscape:export-ydpi="72" />
   <g
      partID="95630"
      id="g524"
@@ -1666,54 +1547,6 @@
        stroke-width="2.4"
        x2="425.805"
        id="line674" />
-  </g>
-  <g
-     partID="99120"
-     id="g676"
-     inkscape:export-filename="/home/elias/Programs/Arduino/rx-joystick-arduino/Hardware/RCReceiverShield/batteryLastConnector/pictures/PCB_schema.png"
-     inkscape:export-xdpi="72"
-     inkscape:export-ydpi="72">
-    <line
-       stroke="#404040"
-       stroke-linecap="round"
-       y1="173.851"
-       x1="468.045"
-       y2="173.851"
-       stroke-width="2.4"
-       x2="425.805"
-       id="line678" />
-  </g>
-  <g
-     partID="99040"
-     id="g680"
-     inkscape:export-filename="/home/elias/Programs/Arduino/rx-joystick-arduino/Hardware/RCReceiverShield/batteryLastConnector/pictures/PCB_schema.png"
-     inkscape:export-xdpi="72"
-     inkscape:export-ydpi="72">
-    <line
-       stroke="#404040"
-       stroke-linecap="round"
-       y1="683.291"
-       x1="468.045"
-       y2="173.851"
-       stroke-width="2.4"
-       x2="468.045"
-       id="line682" />
-  </g>
-  <g
-     partID="99050"
-     id="g684"
-     inkscape:export-filename="/home/elias/Programs/Arduino/rx-joystick-arduino/Hardware/RCReceiverShield/batteryLastConnector/pictures/PCB_schema.png"
-     inkscape:export-xdpi="72"
-     inkscape:export-ydpi="72">
-    <line
-       stroke="#404040"
-       stroke-linecap="round"
-       y1="683.647"
-       x1="467.783"
-       y2="683.291"
-       stroke-width="2.4"
-       x2="468.045"
-       id="line686" />
   </g>
   <g
      partID="100000"
@@ -3755,6 +3588,161 @@
              points="211.05,316.364,206.345,313.643,211.05,310.928"
              id="polygon272" />
         </g>
+      </g>
+    </g>
+  </g>
+  <g
+     transform="translate(1.2490777,0.13287675)"
+     partID="99120"
+     id="g676">
+    <line
+       style="stroke:#404040;stroke-width:2.4000001;stroke-linecap:round"
+       y1="173.211"
+       x1="489.32501"
+       y2="174.011"
+       x2="425.80499"
+       id="line678" />
+  </g>
+  <circle
+     fill="black"
+     cx="425.805"
+     cy="173.851"
+     stroke="none"
+     r="3.6"
+     stroke-width="0"
+     id="circle522"
+     inkscape:export-filename="/home/elias/Programs/Arduino/rx-joystick-arduino/Hardware/RCReceiverShield/batteryLastConnector/pictures/PCB_schema.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72" />
+  <g
+     transform="translate(1.2490777,0.13287675)"
+     partID="99040"
+     id="g680">
+    <line
+       style="stroke:#404040;stroke-width:2.4000001;stroke-linecap:round"
+       y1="683.61102"
+       x1="489.32501"
+       y2="173.211"
+       x2="489.32501"
+       id="line682" />
+  </g>
+  <g
+     transform="translate(1.2490777,0.13287675)"
+     partID="99050"
+     id="g684-0">
+    <line
+       style="stroke:#404040;stroke-width:2.4000001;stroke-linecap:round"
+       y1="683.80701"
+       x1="483.78201"
+       y2="683.61102"
+       x2="489.32501"
+       id="line686-7" />
+  </g>
+  <g
+     partID="64890"
+     id="g453"
+     inkscape:export-filename="/home/elias/Programs/Arduino/rx-joystick-arduino/Hardware/RCReceiverShield/batteryLastConnector/pictures/PCB_schema.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <g
+       transform="translate(463.836,682.56)"
+       id="g455">
+      <g
+         id="g457">
+        <path
+           stroke-opacity="1"
+           fill="#000000"
+           stroke="none"
+           style="opacity:1;fill-rule:nonzero;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;"
+           fill-opacity="1"
+           id="path2400"
+           stroke-width="1.6"
+           d="M5.6834,16A1.6834,1.6834,0,1,1,2.3166,16A1.6834,1.6834,0,1,1,5.6834,16z" />
+        <line
+           fill="none"
+           stroke="#000000"
+           style="stroke-linecap:round"
+           id="line2398"
+           y1="0.986303"
+           y2="15.4311"
+           x1="4"
+           stroke-width="1.78272"
+           x2="4" />
+        <line
+           fill="none"
+           stroke="#000000"
+           stroke-linecap="round"
+           id="line14"
+           y1="35.2048"
+           stroke-width="1.78272"
+           x1="13.2624"
+           y2="49.528"
+           x2="13.2624" />
+        <line
+           fill="none"
+           stroke="#000000"
+           style="stroke-linecap:round"
+           id="line18"
+           y1="35.2048"
+           x1="13.2624"
+           y2="17.036"
+           stroke-width="1.76"
+           x2="6.8" />
+        <path
+           stroke-opacity="1"
+           fill="#000000"
+           stroke="none"
+           style="opacity:1;fill-rule:nonzero;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;"
+           fill-opacity="1"
+           id="path2402"
+           stroke-width="1.6"
+           d="M21.6834,16A1.6834,1.6834,0,1,1,18.3166,16A1.6834,1.6834,0,1,1,21.6834,16z" />
+        <g
+           width="0.6936"
+           x="12.9024"
+           y="49.7048"
+           height="0.5488"
+           id="g464" />
+        <rect
+           width="1.5144"
+           x="12.5192"
+           y="41.9344"
+           height="7.8248"
+           id="rect466" />
+        <g
+           width="0.6936"
+           x="3.6"
+           y="0.8136"
+           height="0.5472"
+           id="g468" />
+        <g
+           width="0.6936"
+           x="19.6"
+           y="0.8136"
+           height="0.5472"
+           id="g470" />
+        <rect
+           width="1.5144"
+           x="19.2"
+           y="1.36"
+           height="7.8264"
+           id="rect472" />
+        <line
+           fill="none"
+           stroke="#000000"
+           style="stroke-linecap:round"
+           id="line16"
+           y1="0.986303"
+           x1="20"
+           y2="15.4311"
+           stroke-width="1.78272"
+           x2="20" />
+        <rect
+           width="1.5144"
+           x="3.2"
+           y="1.36"
+           height="7.8264"
+           id="rect475" />
       </g>
     </g>
   </g>
