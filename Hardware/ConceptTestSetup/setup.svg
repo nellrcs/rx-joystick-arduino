@@ -17,7 +17,7 @@
    viewBox="0 0 695.438 205.218"
    id="svg6874"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="setup_bb.svg">
+   sodipodi:docname="setup.svg">
   <metadata
      id="metadata13796">
     <rdf:RDF>
@@ -75,7 +75,7 @@
      id="namedview13792"
      showgrid="false"
      inkscape:zoom="1.7111984"
-     inkscape:cx="109.961"
+     inkscape:cx="186.09467"
      inkscape:cy="109.13414"
      inkscape:window-x="-2"
      inkscape:window-y="-3"
@@ -83,7 +83,10 @@
      inkscape:current-layer="svg6874" />
   <g
      id="watermark"
-     transform="translate(-332.56201,0)">
+     transform="translate(-332.56201,0)"
+     inkscape:export-filename="/home/johan/Elias/Programs/rx-joystick-arduino/Hardware/ConceptTestSetup/setup.png"
+     inkscape:export-xdpi="120"
+     inkscape:export-ydpi="120">
     <g
        id="g6877">
       <path
@@ -15710,7 +15713,10 @@
   </g>
   <g
      partID="72330"
-     id="g12922">
+     id="g12922"
+     inkscape:export-filename="/home/johan/Elias/Programs/rx-joystick-arduino/Hardware/ConceptTestSetup/setup.png"
+     inkscape:export-xdpi="120"
+     inkscape:export-ydpi="120">
     <g
        transform="translate(0,16)"
        id="g12924">
@@ -17546,7 +17552,10 @@
   </g>
   <g
      partID="72830"
-     id="g13656">
+     id="g13656"
+     inkscape:export-filename="/home/johan/Elias/Programs/rx-joystick-arduino/Hardware/ConceptTestSetup/setup.png"
+     inkscape:export-xdpi="120"
+     inkscape:export-ydpi="120">
     <g
        transform="translate(336.745,60.8581)"
        id="g13658">
@@ -17644,7 +17653,10 @@
   </g>
   <g
      partID="72490"
-     id="g13674">
+     id="g13674"
+     inkscape:export-filename="/home/johan/Elias/Programs/rx-joystick-arduino/Hardware/ConceptTestSetup/setup.png"
+     inkscape:export-xdpi="120"
+     inkscape:export-ydpi="120">
     <g
        transform="translate(336.745,111.258)"
        id="g13676">
@@ -17742,7 +17754,10 @@
   </g>
   <g
      partID="73190"
-     id="g13702">
+     id="g13702"
+     inkscape:export-filename="/home/johan/Elias/Programs/rx-joystick-arduino/Hardware/ConceptTestSetup/setup.png"
+     inkscape:export-xdpi="120"
+     inkscape:export-ydpi="120">
     <line
        stroke="#000000"
        stroke-linecap="round"
@@ -17764,7 +17779,10 @@
   </g>
   <g
      partID="73260"
-     id="g13708">
+     id="g13708"
+     inkscape:export-filename="/home/johan/Elias/Programs/rx-joystick-arduino/Hardware/ConceptTestSetup/setup.png"
+     inkscape:export-xdpi="120"
+     inkscape:export-ydpi="120">
     <line
        stroke="#8c0000"
        stroke-linecap="round"
@@ -17786,7 +17804,10 @@
   </g>
   <g
      partID="73470"
-     id="g13714">
+     id="g13714"
+     inkscape:export-filename="/home/johan/Elias/Programs/rx-joystick-arduino/Hardware/ConceptTestSetup/setup.png"
+     inkscape:export-xdpi="120"
+     inkscape:export-ydpi="120">
     <line
        stroke="#000000"
        stroke-linecap="round"
@@ -17808,7 +17829,10 @@
   </g>
   <g
      partID="73440"
-     id="g13720">
+     id="g13720"
+     inkscape:export-filename="/home/johan/Elias/Programs/rx-joystick-arduino/Hardware/ConceptTestSetup/setup.png"
+     inkscape:export-xdpi="120"
+     inkscape:export-ydpi="120">
     <line
        stroke="#000000"
        stroke-linecap="round"
@@ -17830,7 +17854,10 @@
   </g>
   <g
      partID="73330"
-     id="g13726">
+     id="g13726"
+     inkscape:export-filename="/home/johan/Elias/Programs/rx-joystick-arduino/Hardware/ConceptTestSetup/setup.png"
+     inkscape:export-xdpi="120"
+     inkscape:export-ydpi="120">
     <line
        stroke="#000000"
        stroke-linecap="round"
@@ -17852,7 +17879,10 @@
   </g>
   <g
      partID="73640"
-     id="g13732">
+     id="g13732"
+     inkscape:export-filename="/home/johan/Elias/Programs/rx-joystick-arduino/Hardware/ConceptTestSetup/setup.png"
+     inkscape:export-xdpi="120"
+     inkscape:export-ydpi="120">
     <line
        stroke="#8c0000"
        stroke-linecap="round"
@@ -17874,7 +17904,10 @@
   </g>
   <g
      partID="73610"
-     id="g13738">
+     id="g13738"
+     inkscape:export-filename="/home/johan/Elias/Programs/rx-joystick-arduino/Hardware/ConceptTestSetup/setup.png"
+     inkscape:export-xdpi="120"
+     inkscape:export-ydpi="120">
     <line
        stroke="#8c0000"
        stroke-linecap="round"
@@ -17896,7 +17929,10 @@
   </g>
   <g
      partID="73500"
-     id="g13744">
+     id="g13744"
+     inkscape:export-filename="/home/johan/Elias/Programs/rx-joystick-arduino/Hardware/ConceptTestSetup/setup.png"
+     inkscape:export-xdpi="120"
+     inkscape:export-ydpi="120">
     <line
        stroke="#8c0000"
        stroke-linecap="round"
@@ -17918,7 +17954,10 @@
   </g>
   <g
      partID="73770"
-     id="g13750">
+     id="g13750"
+     inkscape:export-filename="/home/johan/Elias/Programs/rx-joystick-arduino/Hardware/ConceptTestSetup/setup.png"
+     inkscape:export-xdpi="120"
+     inkscape:export-ydpi="120">
     <line
        stroke="#e6ab00"
        stroke-linecap="round"
@@ -17940,7 +17979,10 @@
   </g>
   <g
      partID="73740"
-     id="g13756">
+     id="g13756"
+     inkscape:export-filename="/home/johan/Elias/Programs/rx-joystick-arduino/Hardware/ConceptTestSetup/setup.png"
+     inkscape:export-xdpi="120"
+     inkscape:export-ydpi="120">
     <line
        stroke="#e6ab00"
        stroke-linecap="round"
@@ -17962,7 +18004,10 @@
   </g>
   <g
      partID="73670"
-     id="g13762">
+     id="g13762"
+     inkscape:export-filename="/home/johan/Elias/Programs/rx-joystick-arduino/Hardware/ConceptTestSetup/setup.png"
+     inkscape:export-xdpi="120"
+     inkscape:export-ydpi="120">
     <line
        stroke="#e6ab00"
        stroke-linecap="round"
@@ -17984,7 +18029,10 @@
   </g>
   <g
      partID="73800"
-     id="g13768">
+     id="g13768"
+     inkscape:export-filename="/home/johan/Elias/Programs/rx-joystick-arduino/Hardware/ConceptTestSetup/setup.png"
+     inkscape:export-xdpi="120"
+     inkscape:export-ydpi="120">
     <line
        stroke="#e6ab00"
        stroke-linecap="round"
@@ -18006,7 +18054,10 @@
   </g>
   <g
      partID="73930"
-     id="g13774">
+     id="g13774"
+     inkscape:export-filename="/home/johan/Elias/Programs/rx-joystick-arduino/Hardware/ConceptTestSetup/setup.png"
+     inkscape:export-xdpi="120"
+     inkscape:export-ydpi="120">
     <line
        stroke="#e6ab00"
        stroke-linecap="round"
@@ -18028,7 +18079,10 @@
   </g>
   <g
      partID="73900"
-     id="g13780">
+     id="g13780"
+     inkscape:export-filename="/home/johan/Elias/Programs/rx-joystick-arduino/Hardware/ConceptTestSetup/setup.png"
+     inkscape:export-xdpi="120"
+     inkscape:export-ydpi="120">
     <line
        stroke="#e6ab00"
        stroke-linecap="round"
@@ -18050,7 +18104,10 @@
   </g>
   <g
      partID="73830"
-     id="g13786">
+     id="g13786"
+     inkscape:export-filename="/home/johan/Elias/Programs/rx-joystick-arduino/Hardware/ConceptTestSetup/setup.png"
+     inkscape:export-xdpi="120"
+     inkscape:export-ydpi="120">
     <line
        stroke="#e6ab00"
        stroke-linecap="round"
@@ -18076,9 +18133,9 @@
      x="247.23981"
      y="93.20977"
      id="text4285"
-     inkscape:export-xdpi="300"
-     inkscape:export-ydpi="300"
-     inkscape:export-filename="/home/johan/Elias/Programs/rx-joystick-arduino/Hardware/ConceptTestSetup/setup_col.png"><tspan
+     inkscape:export-xdpi="120"
+     inkscape:export-ydpi="120"
+     inkscape:export-filename="/home/johan/Elias/Programs/rx-joystick-arduino/Hardware/ConceptTestSetup/setup.png"><tspan
        sodipodi:role="line"
        id="tspan4287"
        x="247.23981"
@@ -18089,18 +18146,18 @@
      d="M 311.9479,86.757735 332.83675,71.010751"
      id="path4289-0"
      sodipodi:nodetypes="cc"
-     inkscape:export-filename="/home/johan/Elias/Programs/rx-joystick-arduino/Hardware/ConceptTestSetup/setup_col.png"
-     inkscape:export-xdpi="300"
-     inkscape:export-ydpi="300" />
+     inkscape:export-filename="/home/johan/Elias/Programs/rx-joystick-arduino/Hardware/ConceptTestSetup/setup.png"
+     inkscape:export-xdpi="120"
+     inkscape:export-ydpi="120" />
   <path
      inkscape:connector-curvature="0"
      style="fill:none;stroke:#000000;stroke-width:0.80000007px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:none;marker-end:url(#Arrow2Lend)"
      d="m 312.16557,95.332006 20.88886,23.138424"
      id="path4289-6"
      sodipodi:nodetypes="cc"
-     inkscape:export-filename="/home/johan/Elias/Programs/rx-joystick-arduino/Hardware/ConceptTestSetup/setup_col.png"
-     inkscape:export-xdpi="300"
-     inkscape:export-ydpi="300" />
+     inkscape:export-filename="/home/johan/Elias/Programs/rx-joystick-arduino/Hardware/ConceptTestSetup/setup.png"
+     inkscape:export-xdpi="120"
+     inkscape:export-ydpi="120" />
   <rect
      style="fill:none"
      id="rect13839"
@@ -18110,5 +18167,8 @@
      y="0.32414433"
      transform="matrix(0.80000007,0,0,0.80000007,0,-5.5154727e-6)"
      rx="0.59887999"
-     ry="0.5" />
+     ry="0.5"
+     inkscape:export-filename="/home/johan/Elias/Programs/rx-joystick-arduino/Hardware/ConceptTestSetup/setup.png"
+     inkscape:export-xdpi="120"
+     inkscape:export-ydpi="120" />
 </svg>

@@ -16,7 +16,7 @@
    height="11.8267in"
    viewBox="0 0 505.436 851.524"
    id="svg2"
-   inkscape:version="0.47 r22583"
+   inkscape:version="0.48.4 r9939"
    sodipodi:docname="PCB_schema.svg"
    inkscape:export-filename="/home/elias/Programs/Arduino/rx-joystick-arduino/Hardware/RCReceiverShield/batteryLastConnector/pictures/PCB_schema.png"
    inkscape:export-xdpi="72"
@@ -29,7 +29,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -52,15 +52,15 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1280"
-     inkscape:window-height="959"
+     inkscape:window-width="1366"
+     inkscape:window-height="709"
      id="namedview942"
      showgrid="false"
      inkscape:snap-bbox="false"
      inkscape:zoom="0.59"
-     inkscape:cx="601.85053"
-     inkscape:cy="106.19493"
-     inkscape:window-x="-4"
+     inkscape:cx="89.3"
+     inkscape:cy="449.76909"
+     inkscape:window-x="-2"
      inkscape:window-y="-3"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2" />
@@ -94,10 +94,10 @@
           <line
              id="line403"
              y1="9.7224998"
-             x1="46.735397"
+             x1="46.692451"
              y2="9.7224998"
-             x2="1.1144602"
-             style="fill:none;stroke:#000000;stroke-width:2.43537879;stroke-linecap:round;stroke-linejoin:round" />
+             x2="-0.53751087"
+             style="fill:none;stroke:#000000;stroke-width:2.52127314;stroke-linecap:round;stroke-linejoin:round" />
           <polyline
              points="61.64,35.8468,46.5963,29.1625,61.64,22.4742"
              id="polyline405"
@@ -948,42 +948,39 @@
      id="g490"
      inkscape:export-filename="/home/elias/Programs/Arduino/rx-joystick-arduino/Hardware/RCReceiverShield/batteryLastConnector/pictures/PCB_schema.png"
      inkscape:export-xdpi="72"
-     inkscape:export-ydpi="72">
+     inkscape:export-ydpi="72"
+     transform="translate(-20.33902,0)">
     <g
        transform="translate(373.773,810.826)"
        id="g492">
       <g
          id="g494">
         <path
-           fill="none"
-           stroke="#000000"
            id="path496"
-           stroke-width="1.92"
-           d="M8.9712,17.008L8.9712,0" />
+           d="M 8.9712,17.008 8.9712,0"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#000000;stroke-width:1.91999996" />
         <g
            width="0.756"
            x="8.592"
-           fill="none"
            height="0.7624"
-           id="g498" />
+           id="g498"
+           style="fill:none" />
         <path
-           fill="none"
-           stroke="#000000"
            id="path500"
-           stroke-width="1.92"
-           d="M0,17.008l17.9408,0" />
+           d="m 0,17.008 17.9408,0"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#000000;stroke-width:1.91999996" />
         <path
-           fill="none"
-           stroke="#000000"
            id="path502"
-           stroke-width="1.92"
-           d="M2.9888,20.164l11.9616,0" />
+           d="m 2.9888,20.164 11.9616,0"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#000000;stroke-width:1.91999996" />
         <path
-           fill="none"
-           stroke="#000000"
            id="path504"
-           stroke-width="1.92"
-           d="M11.956,23.3184L5.9808,23.3184" />
+           d="m 11.956,23.3184 -5.9752,0"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#000000;stroke-width:1.91999996" />
       </g>
     </g>
   </g>
@@ -1723,59 +1720,45 @@
      id="g688"
      inkscape:export-filename="/home/elias/Programs/Arduino/rx-joystick-arduino/Hardware/RCReceiverShield/batteryLastConnector/pictures/PCB_schema.png"
      inkscape:export-xdpi="72"
-     inkscape:export-ydpi="72">
+     inkscape:export-ydpi="72"
+     transform="translate(19.775056,0)">
     <line
-       stroke="#404040"
-       stroke-linecap="round"
-       y1="24.0913"
-       x1="361.805"
+       y1="24.091299"
+       x1="361.80499"
        y2="24.5914"
-       stroke-width="2.4"
-       x2="365.123"
-       id="line690" />
+       x2="365.12299"
+       id="line690"
+       style="stroke:#404040;stroke-width:2.4000001;stroke-linecap:round" />
   </g>
-  <circle
-     fill="black"
-     cx="365.123"
-     cy="24.5914"
-     stroke="none"
-     r="3.6"
-     stroke-width="0"
-     id="circle692"
-     inkscape:export-filename="/home/elias/Programs/Arduino/rx-joystick-arduino/Hardware/RCReceiverShield/batteryLastConnector/pictures/PCB_schema.png"
-     inkscape:export-xdpi="72"
-     inkscape:export-ydpi="72" />
   <g
      partID="99630"
      id="g694"
      inkscape:export-filename="/home/elias/Programs/Arduino/rx-joystick-arduino/Hardware/RCReceiverShield/batteryLastConnector/pictures/PCB_schema.png"
      inkscape:export-xdpi="72"
-     inkscape:export-ydpi="72">
+     inkscape:export-ydpi="72"
+     transform="translate(19.661052,0)">
     <line
-       stroke="#404040"
-       stroke-linecap="round"
        y1="3.61131"
-       x1="361.805"
-       y2="24.0913"
-       stroke-width="2.4"
-       x2="361.805"
-       id="line696" />
+       x1="361.80499"
+       y2="24.091299"
+       x2="361.80499"
+       id="line696"
+       style="stroke:#404040;stroke-width:2.4000001;stroke-linecap:round" />
   </g>
   <g
      partID="99250"
      id="g698"
      inkscape:export-filename="/home/elias/Programs/Arduino/rx-joystick-arduino/Hardware/RCReceiverShield/batteryLastConnector/pictures/PCB_schema.png"
      inkscape:export-xdpi="72"
-     inkscape:export-ydpi="72">
+     inkscape:export-ydpi="72"
+     transform="matrix(1.0709089,0,0,1.0709089,-5.9652155,-0.25607389)">
     <line
-       stroke="#404040"
-       stroke-linecap="round"
        y1="3.61131"
-       x1="85.3251"
+       x1="85.325104"
        y2="3.61131"
-       stroke-width="2.4"
-       x2="361.805"
-       id="line700" />
+       x2="361.80499"
+       id="line700"
+       style="stroke:#404040;stroke-width:2.4000001;stroke-linecap:round" />
   </g>
   <g
      partID="99260"
@@ -1814,16 +1797,15 @@
      id="g710"
      inkscape:export-filename="/home/elias/Programs/Arduino/rx-joystick-arduino/Hardware/RCReceiverShield/batteryLastConnector/pictures/PCB_schema.png"
      inkscape:export-xdpi="72"
-     inkscape:export-ydpi="72">
+     inkscape:export-ydpi="72"
+     transform="matrix(1.0216833,0,0,1,-10.174768,0)">
     <line
-       stroke="#404040"
-       stroke-linecap="round"
-       y1="726.167"
-       x1="404.003"
-       y2="725.531"
-       stroke-width="2.4"
-       x2="468.045"
-       id="line712" />
+       y1="726.16699"
+       x1="404.00299"
+       y2="725.53101"
+       x2="468.04501"
+       id="line712"
+       style="stroke:#404040;stroke-width:2.4000001;stroke-linecap:round" />
   </g>
   <g
      partID="104630"
@@ -1891,16 +1873,19 @@
      inkscape:export-xdpi="72"
      inkscape:export-ydpi="72" />
   <circle
-     fill="black"
-     cx="365.123"
+     cx="365.12299"
      cy="24.5917"
-     stroke="none"
-     r="3.6"
-     stroke-width="0"
+     r="3.5999999"
      id="circle728"
      inkscape:export-filename="/home/elias/Programs/Arduino/rx-joystick-arduino/Hardware/RCReceiverShield/batteryLastConnector/pictures/PCB_schema.png"
      inkscape:export-xdpi="72"
-     inkscape:export-ydpi="72" />
+     inkscape:export-ydpi="72"
+     sodipodi:cx="365.12299"
+     sodipodi:cy="24.5917"
+     sodipodi:rx="3.5999999"
+     sodipodi:ry="3.5999999"
+     transform="translate(19.661052,0)"
+     style="fill:#000000;stroke:none" />
   <g
      partID="105290"
      id="g730"
@@ -2373,17 +2358,6 @@
      inkscape:export-filename="/home/elias/Programs/Arduino/rx-joystick-arduino/Hardware/RCReceiverShield/batteryLastConnector/pictures/PCB_schema.png"
      inkscape:export-xdpi="72"
      inkscape:export-ydpi="72" />
-  <circle
-     fill="black"
-     cx="384.563"
-     cy="726.167"
-     stroke="none"
-     r="3.6"
-     stroke-width="0"
-     id="circle830"
-     inkscape:export-filename="/home/elias/Programs/Arduino/rx-joystick-arduino/Hardware/RCReceiverShield/batteryLastConnector/pictures/PCB_schema.png"
-     inkscape:export-xdpi="72"
-     inkscape:export-ydpi="72" />
   <g
      partID="108770"
      id="g832"
@@ -2448,44 +2422,45 @@
      id="g846"
      inkscape:export-filename="/home/elias/Programs/Arduino/rx-joystick-arduino/Hardware/RCReceiverShield/batteryLastConnector/pictures/PCB_schema.png"
      inkscape:export-xdpi="72"
-     inkscape:export-ydpi="72">
+     inkscape:export-ydpi="72"
+     transform="translate(-20.33902,0)">
     <line
-       stroke="#404040"
-       stroke-linecap="round"
-       y1="725.531"
+       y1="725.53101"
        x1="382.285"
-       y2="811.207"
-       stroke-width="2.4"
-       x2="382.743"
-       id="line848" />
+       y2="811.20697"
+       x2="382.74301"
+       id="line848"
+       style="stroke:#404040;stroke-width:2.4000001;stroke-linecap:round" />
   </g>
   <g
      partID="113770"
      id="g850"
      inkscape:export-filename="/home/elias/Programs/Arduino/rx-joystick-arduino/Hardware/RCReceiverShield/batteryLastConnector/pictures/PCB_schema.png"
      inkscape:export-xdpi="72"
-     inkscape:export-ydpi="72">
+     inkscape:export-ydpi="72"
+     transform="matrix(0.5,-0.8660254,0.8660254,0.5,-436.38319,696.71671)">
     <line
-       stroke="#404040"
-       stroke-linecap="round"
-       y1="726.167"
-       x1="384.563"
-       y2="725.531"
-       stroke-width="2.4"
+       y1="726.16699"
+       x1="384.56299"
+       y2="725.53101"
        x2="382.285"
-       id="line852" />
+       id="line852"
+       style="stroke:#404040;stroke-width:2.4000001;stroke-linecap:round" />
   </g>
   <circle
-     fill="black"
-     cx="384.563"
-     cy="726.167"
-     stroke="none"
-     r="3.6"
-     stroke-width="0"
+     cx="384.56299"
+     cy="726.16699"
+     r="3.5999999"
      id="circle854"
      inkscape:export-filename="/home/elias/Programs/Arduino/rx-joystick-arduino/Hardware/RCReceiverShield/batteryLastConnector/pictures/PCB_schema.png"
      inkscape:export-xdpi="72"
-     inkscape:export-ydpi="72" />
+     inkscape:export-ydpi="72"
+     sodipodi:cx="384.56299"
+     sodipodi:cy="726.16699"
+     sodipodi:rx="3.5999999"
+     sodipodi:ry="3.5999999"
+     transform="translate(-20.33902,0)"
+     style="fill:#000000;stroke:none" />
   <g
      id="partLabel"
      partID="64700"
