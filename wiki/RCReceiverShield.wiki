@@ -39,4 +39,4 @@ Files are located at "/Hardware/RCReceiverShield/batteryLastConnector/".
 
 Bottom and Top:
 
-[http://rx-joystick-arduino.googlecode.com/svn/trunk/Hardware/RCReceiverShield/batteryLastConnector/pictures/PCB_pcb_bottom_top.png]
+Coming soon
