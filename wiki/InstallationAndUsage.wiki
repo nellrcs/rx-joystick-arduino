@@ -115,9 +115,9 @@ Make sure the following dependencies are installed on your computer:
 
   * Execute the `serialToJoystick.py` program with the appropriate command-line arguments (*TODO*), e.g. by running 
 {{{
-python serialToJoystick.py
+$ python serialToJoystick.py
 }}}
-  in that directory.
+  in that directory. Note: you may have to execute it with root-permissions (as superuser, e.g.: "`sudo python serialToJoystick.py`").
   If the following message shows up in the terminal, you'll be able to use it (it will show up with the name "`<your joystick name>`") in all games supporting joysticks:
 {{{
 Created a joystick device named '<your joystick name>'.
