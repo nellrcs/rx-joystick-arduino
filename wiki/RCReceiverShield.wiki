@@ -30,6 +30,12 @@ Bottom and Top:
 
 [http://rx-joystick-arduino.googlecode.com/svn/trunk/Hardware/RCReceiverShield/batteryFirstConnector/pictures/PCB_pcb_bottom_top.png]
 
+Realisation:
+
+[http://rx-joystick-arduino.googlecode.com/svn/trunk/Hardware/RCReceiverShield/batteryFirstConnector/pictures/PCB_top_real.jpg]
+
+Unfortunately in my example the switch is inverted, however a normal switch should just be slided in the direction of the desired mode ("CHs" or "BAT").
+
 
 = "Battery connector coming last" edition =
 
@@ -37,4 +43,4 @@ Files are located at "/Hardware/RCReceiverShield/batteryLastConnector/".
 
 Bottom and Top:
 
-Coming soon
+[http://rx-joystick-arduino.googlecode.com/svn/trunk/Hardware/RCReceiverShield/batteryLastConnector/pictures/PCB_pcb_bottom_top.png]
