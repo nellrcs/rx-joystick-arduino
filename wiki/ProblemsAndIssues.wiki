@@ -11,6 +11,11 @@ This side is shown of the PCB images on the [RCReceiverShield RC Receiver Shield
 
 === "My RC receiver has more than 8 output channels." ===
 
+In that case, if you're planning to use 8 or less channels, it will still work:
+you need to connect it with the Arduino in the way described on the InstallationAndUsage wiki.
+
+What follows, assumes you want to effetely use more than 8 channels.
+
 This maximum amount is chosen because the big majority of RC receivers has this amount or less, and then the size and complexity of the RC Receiver Shield remains feasible for DIY purposes. 
 
 However, it is technically possible to extend the code on the Arduino-side, computer-side and the RC Receiver Shield hardware, to meet stronger requirements.
