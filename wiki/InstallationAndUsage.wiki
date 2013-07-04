@@ -60,6 +60,8 @@ _Example:_
 
 _Example_:
 
+Using "CHs" mode and capturing channel 1 and 2 of RC receiver.
+
 [http://rx-joystick-arduino.googlecode.com/svn/trunk/Hardware/ConceptTestSetup/setup.png]
 
 [http://rx-joystick-arduino.googlecode.com/svn/trunk/Hardware/ConceptTestSetup/setup_real.jpg]
@@ -70,6 +72,13 @@ _Example_:
   * Push the shield on the Arduino.
   * Connect the RC receiver with the RC Receiver Shield using extension RC connector cables, as described in two sections before.
  ` `*Warning*: it is important that you choose to use either the "Ch#" input ports *OR* the "BAT" input port (PPM signal), and correspondingly you have to put the switch to either "CHs/PWM" or "BAT/PPM".
+
+_Example_:
+
+Using "CHs" mode and capturing channel 1, 3, 4 and 5 of RC receiver.
+
+[http://rx-joystick-arduino.googlecode.com/svn/trunk/Hardware/RCReceiverShield/example_setup2.jpg]
+[http://rx-joystick-arduino.googlecode.com/svn/trunk/Hardware/RCReceiverShield/example_setup.jpg]
 
 == Software ==
 
