@@ -4,12 +4,11 @@
   * Implement PPM reading from BAT signal port on receiver or DSC port on transmitter (Arduino side)
   This has not been done yet because my receivers don't output PPM on the BAT signal port (instead, it is connected to the ground), and I have no DSC cable.
   * Add command-line arguments (computer side)
-  * Create a verbose dummy class for the virtual joystick if the python `uinput` module is not found
-  This can also serve as a starting point for the implementation on operating systems that do not use uinput (like MacOs or Windows).
+  * Implementation of externally accessible (in other applications) virtual joysticks on operating systems that do not use uinput (like MacOs or Windows).
   * Make the automatic Arduino detection platform independent
   Currently this works only on Linux, it may also work on MacOs, but that is not tested.
   * Test with more receivers (currently tested with Graupner JR R700 and Futaba R142JE)
   * Add a joystick configuration file for some games, for example for Flightgear.
   * Improve the quantization noise filter.
   * Improve performance on the computer-side
-  On an Intel i5, the program uses 5% of one cpu core, which is much IMO, given that the functions used of the python `serial` module are interrupt-based.
+  On an Intel i5, the program uses 0.8% of one cpu core, which is much IMO, given that the functions used of the python `serial` module are interrupt-based.
