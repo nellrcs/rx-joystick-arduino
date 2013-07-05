@@ -89,7 +89,7 @@ Using "CHs" mode and capturing channel 1, 3, 4 and 5 of RC receiver.
   * Open the installed program and load the file "`RC_receiver.ino`" located at "/Software/Arduino/".
   * Click on the upload icon. If all went right, the program should report:
 {{{
-Upload succeeded.
+Upload done.
 }}}
   This program code will stay on the Arduino, even if it has been powered off.
 
@@ -117,7 +117,7 @@ Make sure the following dependencies are installed on your computer:
 {{{
 $ python serialToJoystick.py
 }}}
-  in that directory. Note: you may have to execute it with root-permissions (as superuser, e.g.: "`sudo python serialToJoystick.py`").
+  in that directory. Note: you may have to execute it with root-permissions (as superuser, e.g.: "`sudo python serialToJoystick.py`"), because it creates a virtual joystick device.
   If the following message shows up in the terminal, you'll be able to use it (it will show up with the name "`<your joystick name>`") in all games supporting joysticks:
 {{{
 Created a joystick device named '<your joystick name>'.
