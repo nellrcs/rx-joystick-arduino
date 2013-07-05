@@ -1,15 +1,10 @@
-#summary An example of using a Futaba R142JE (2 channel receiver) to play Re-Volt (rc race game)
+#summary An example of using a Graupner MX (7 channel receiver of which 2 channels were used) to play Re-Volt (RC game)
 #labels Phase-Deploy,Featured
-TODO
 
-= Introduction =
+You can see the video [http://youtu.be/xTvmYfnkBe4 here].
+There is some info in the description.
 
-Add your content here.
+In this scenario we use 2 cables to connect channel 1 and channel 2 of the RC receiver with Arduino's signal pins D2 and D3, and +5V and ground.
+We don't use the [RCReceiverShield RC Receiver Shield], just loose wires (which is actually not recommended, but it was an early test).
 
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+For more information, head to the InstallationAndUsage wiki.
