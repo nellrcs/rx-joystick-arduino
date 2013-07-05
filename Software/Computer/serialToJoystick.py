@@ -8,18 +8,18 @@ packetCounter = 0
 
 
 #controllerName = "Graupner MX"
-controllerName = None
+controllerName = None            ###
 
-numChannels = 2
-arduinoDevice = None
-doubleSweep = False
-useCompositePPM = False
+numChannels = 2                  ###
+arduinoDevice = None             ###
+doubleSweep = False              ###
+useCompositePPM = False          ###
 
 maxLatency = 100e-3 # 100ms
 doFiltering = True
 filteringTolerance = 8
 
-PPM_Period = 22e-3
+PPM_Period = 22e-3 # 22ms
 
 
 
@@ -29,7 +29,7 @@ def connectToArduino():
 	if not arduinoDevice:
 		try:
 			from serial.tools import list_ports
-			dmesgOutput = os.popen('dmesg').read()
+			dmesgOutput = os.popen("dmesg").read()
 			lastOccurence = dmesgOutput.rfind("Arduino")
 			ttyBegin = dmesgOutput.find("tty", lastOccurence)
 			ttyEnd = min([dmesgOutput.find(c, ttyBegin) for c in (':', ' ', '\t', '\r', '\n') if c in dmesgOutput[ttyBegin:]])
@@ -75,21 +75,52 @@ def connectToRCreceiver(ser):
 	return True
 
 
+class Joystick:
+	def __init__(self, numAxis, name):
+		self.numAxis = numAxis
+		self.name = name
+	def emit(self, axisId, value, syn = True):
+		raise NotImplementedError("This is not yet implemented.")
+
+class UInputJoystick(Joystick): # Works on Linux
+	def __init__(self, numAxis, name):
+		Joystick.__init__(self, numAxis, name)
+		import uinput
+		events = [(3, axisId) + (0, 255, 0, 0) for axisId in range(self.numAxis)]
+		self.joy = uinput.Device(events, name = self.name, bustype = 0x03) # bustype = BUS_USB
+		#writeJoystick(self, chr(128) * numAxis) # reset joystick controls
+	def emit(self, axisId, value, syn = True):
+		self.joy.emit((3, axisId), value, syn) # uinput.ABS_Ch(axisId = (3, axisId)
+
+class DummyJoystick(Joystick): # Platform independent, but no externally usable virtual joystick
+	def __init__(self, numAxis, name):
+		Joystick.__init__(self, numAxis, name)
+		self.buffer = {}
+	def emit(self, axisId, value, syn = True):
+		self.buffer[axisId] = value
+		if syn:
+			out = "#### Incoming Joystick '%s' Event: ####\n"
+			for axisId in sorted(list(self.buffer)):
+				v = self.buffer[axisId]
+				p = int(round(v / 2.55))
+				meter = list("--------+--------")
+				meter[int(round(v / 16.))] = 'o'
+				out += "# Axis %s [%s] %s (%s%%)\n" % (axisId, ''.join(meter), v, p)
+				del self.buffer[axisId]
+			print (out)
+
 def createJoystick():
 	global controllerName
 	if not controllerName:
 		controllerName = "RC Receiver (%schs)" % numChannels
-	events = [(3, i) + (0, 255, 0, 0) for i in range(numChannels)]
 	
 	try:
-		import uinput
-		joy = uinput.Device(events, name = controllerName, bustype = 0x03) # bustype = BUS_USB
-		#writeJoystick(joy, chr(128) * numChannels)
+		joy = UInputJoystick(numChannels, name = controllerName)
+		print ("Created a joystick device named '%s'." % controllerName)
 	except OSError:
-		print ("Failed to create a joystick device.")
-		return None
-	
-	print ("Created a joystick device named '%s'." % controllerName)
+		joy = DummyJoystick(numChannels, name = controllerName)
+		print ("Failed to create a joystick device,")
+		print ("I'll create a dummy one named '%s', it will print all inputs." % controllerName)
 	
 	return joy
 
@@ -106,7 +137,7 @@ def readRCreceiver(ser, joy):
 		if ser.inWaiting() > maxBuffer:
 			ser.flushInput()
 			buffer = ""
-			print "Buffer overrun occured. Resetting buffer."
+			print ("Buffer overrun occured. Resetting buffer.")
 		
 		#time.sleep(20e-3 / 2) # 20ms / 2
 		if ser.inWaiting():
@@ -120,7 +151,7 @@ def readRCreceiver(ser, joy):
 			if len(data) == numChannels:
 				writeJoystick(joy, processData(data))
 				packetCounter += 1
-			#print data # TODO: remove (debug)
+			#print (data) # TODO: remove (debug)
 
 
 lastlastData = numChannels * [127]
@@ -145,14 +176,13 @@ def processData(data):
 				holdLastData[i] = True
 	lastlastData = lastData
 	lastData = data
-	#print data, unf
+	#print (data, unf)
 	return data
 
 
 def writeJoystick(joy, data):
 	for i in range(numChannels):
-		joy.emit((3, i), data[i], syn = (i == numChannels-1))
-		#print "joy.emit((3, %s), %s, syn = %s)" % (i, data[i], i == numChannels-1) # TODO: remove (debug)
+		joy.emit(i, data[i], syn = (i == numChannels-1))
 
 
 def main():
@@ -178,10 +208,10 @@ def main():
 		if ser:
 			ser.close()
 		
-		#print debugData.split("\xff") # TODO: remove this
+		#print (debugData.split("\xff")) # TODO: remove this
 		#packetCounter = len(debugData.split("\xff")) # TODO: remove this
 		if joy:
-			#print "Time of CPU:", endTime - startTime # TODO: remove this
+			#print ("Time of CPU:", endTime - startTime) # TODO: remove this
 			expectedNbPackets = (endTime-startTime) / PPM_Period
 			print ("%s packets captured (%s%%)" % (packetCounter, int(100 * packetCounter/expectedNbPackets)))
 		
