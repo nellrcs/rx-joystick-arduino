@@ -12,3 +12,4 @@
   * Improve the quantization noise filter.
   * Improve performance on the computer-side
   On an Intel i5, the program uses 0.8% of one cpu core, which is much IMO, given that the functions used of the python `serial` module are interrupt-based.
+  * Make more use of OO programming in the python code
