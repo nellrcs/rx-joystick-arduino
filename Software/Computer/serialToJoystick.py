@@ -7,13 +7,12 @@ import time, math
 packetCounter = 0
 
 
-#controllerName = "Graupner MX"
-controllerName = None            ###
-
-numChannels = 2                  ###
-arduinoDevice = None             ###
-doubleSweep = False              ###
-useCompositePPM = False          ###
+# Default command-line argument values
+controllerName = None
+numChannels = 2
+arduinoDevice = None
+doubleSweep = False
+useCompositePPM = False
 
 maxLatency = 100e-3 # 100ms
 doFiltering = True
@@ -99,7 +98,7 @@ class DummyJoystick(Joystick): # Platform independent, but no externally usable 
 	def emit(self, axisId, value, syn = True):
 		self.buffer[axisId] = value
 		if syn:
-			out = "#### Incoming Joystick '%s' Event: ####\n"
+			out = "#### Incoming Joystick '%s' Event: ####\n" % self.name
 			for axisId in sorted(list(self.buffer)):
 				v = self.buffer[axisId]
 				p = int(round(v / 2.55))
@@ -218,4 +217,37 @@ def main():
 		print ("Connections closed.")
 
 if __name__ == "__main__":
+	import argparse
+
+	parser = argparse.ArgumentParser(description = 'Creates a virtual joystick controller using data from a RC receiver via an Arduino. '+ 
+		'Go to http://code.google.com/p/rx-joystick-arduino/ for more info.')
+		
+	parser.add_argument('-c, --num-channels', dest = 'numChannels', action = 'store',
+		default = numChannels, required = True, type = int, choices = xrange(1, 1+8),
+		help = 'the exact amount of channels used')
+
+	parser.add_argument('-n, --name', dest = 'controllerName', action = 'store',
+			default = controllerName,
+			help = 'the name of the virtual joystick, how it will appear to other applications, if not provided, autogeneration will occur')
+	parser.add_argument('-d, --device', dest = 'arduinoDevice', action = 'store',
+			default = arduinoDevice,
+			help = "the device path of the Arduino, on Linux usually something like '/dev/ttyACM0', if not provided, autodetection will be performed")
+
+	parser.add_argument('-p, --use-ppm', dest = 'useCompositePPM', action='store_true',
+			help = 'use one PPM stream as input to capture all channels, instead of using multiple channel streams')
+	parser.add_argument('-D, --double-sweep', dest = 'doubleSweep', action = 'store_true',
+			help = 'double the range of all channels, resolution will be halved')
+
+	args = parser.parse_args()
+
+	numChannels = args.numChannels
+	controllerName = args.controllerName
+	arduinoDevice = args.arduinoDevice
+	useCompositePPM = args.useCompositePPM
+	doubleSweep = args.doubleSweep
+
+	if useCompositePPM:
+		print ("PPM input is not yet implemented. Using channels instead.")
+		useCompositePPM = False
+
 	main()
