@@ -169,4 +169,4 @@ $ python serialToJoystick.py -c 2 -d COM4 -t
 Created a joystick device named '<your joystick name>'.
 }}}
   * Start a game or application that uses this joystick, and enjoy!
-  * To stop the joystick, send a KeyboardInterrupt in the terminal where `serialToJoystick.py` is running by pressing `Ctrl-C`.
+  * To stop the joystick, send a `KeyboardInterrupt` in the terminal where `serialToJoystick.py` is running by pressing `Ctrl-C`.
