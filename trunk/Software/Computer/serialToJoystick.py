@@ -13,6 +13,7 @@ numChannels = 2
 arduinoDevice = None
 doubleSweep = False
 useCompositePPM = False
+useDummyJoystick = False
 
 maxLatency = 100e-3 # 100ms
 doFiltering = True
@@ -113,15 +114,23 @@ def createJoystick():
 	if not controllerName:
 		controllerName = "RC Receiver (%schs)" % numChannels
 	
-	try:
+	def createUInputJoystick():
 		joy = UInputJoystick(numChannels, name = controllerName)
 		print ("Created a joystick device named '%s'." % controllerName)
-	except OSError:
+		return joy
+	def createDummyJoystick():
 		joy = DummyJoystick(numChannels, name = controllerName)
 		print ("Failed to create a joystick device,")
 		print ("I'll create a dummy one named '%s', it will print all inputs." % controllerName)
+		return joy
 	
-	return joy
+	if useDummyJoystick:
+		return createDummyJoystick()
+	
+	try:
+		return createUInputJoystick()
+	except OSError:
+		return createDummyJoystick()
 
 
 def readRCreceiver(ser, joy):
@@ -237,6 +246,8 @@ if __name__ == "__main__":
 			help = 'use one PPM stream as input to capture all channels, instead of using multiple channel streams')
 	parser.add_argument('-D, --double-sweep', dest = 'doubleSweep', action = 'store_true',
 			help = 'double the range of all channels, resolution will be halved')
+	parser.add_argument('-t, --test', dest = 'useDummyJoystick', action = 'store_true',
+			help = "print and visualise every controller event update, don't create an externally accessible virtual joystick")
 
 	args = parser.parse_args()
 
@@ -245,6 +256,7 @@ if __name__ == "__main__":
 	arduinoDevice = args.arduinoDevice
 	useCompositePPM = args.useCompositePPM
 	doubleSweep = args.doubleSweep
+	useDummyJoystick = args.useDummyJoystick
 
 	if useCompositePPM:
 		print ("PPM input is not yet implemented. Using channels instead.")
