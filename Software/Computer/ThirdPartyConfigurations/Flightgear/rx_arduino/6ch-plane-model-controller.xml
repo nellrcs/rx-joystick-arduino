@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<!--
+Run 'python serialToJoystick.py -c 6' (may need to be run as root) to connect to the RC receiver and create the joystick device.
+More info on http://code.google.com/p/rx-joystick-arduino/
+
+Tested with "Graupner JR mx-12" as transmitter and "Graupner JR R700" as receiver.
+My prefered throttle mode on the Graupner mx-12 is mode 2.
+Also scale all controls with 132% to get the full range.
+
+Linux/Windows/Mac Axis Numbers:
+  0     throttle (positive == forward)
+  1   	Aileron (positive == right) 
+  2  	Elevator (positive == down/back/nose-up)
+  3   	Rudder control (positive == right) 
+  4     Gear (positive == down)
+  5     Flaps (positive == down)
+
+$Id$
+-->
+<PropertyList>
+ <name>RC Receiver (6chs)</name>
+
+ <name>Graupner mx-12</name> <!-- tested -->
+ <name>Graupner JR mx-12</name>
+
+ <axis n="0">
+  <desc>Throttle</desc>
+  <binding>
+   <command>nasal</command>
+   <script>controls.throttleAxis(1)</script> <!-- reversed -->
+  </binding>
+ </axis>
+
+ <axis n="1">
+  <desc>Aileron</desc>
+  <binding>
+   <command>property-scale</command>
+   <property>/controls/flight/aileron</property>
+   <factor type="double">-1.0</factor>
+   <squared type="bool">true</squared>
+  </binding>
+ </axis>
+
+ <axis n="2">
+  <desc>Elevator</desc>
+  <binding>
+   <command>property-scale</command>
+   <property>/controls/flight/elevator</property>
+   <squared type="bool">true</squared>
+  </binding>
+ </axis>
+
+ <axis n="3">
+  <desc>Rudder</desc>
+  <binding>
+   <command>property-scale</command>
+   <property>/controls/flight/rudder</property>
+   <factor type="double">-1.0</factor>
+  </binding>
+ </axis>
+
+ <axis n="4">
+  <desc>Gear</desc>
+  <low>
+   <repeatable>false</repeatable>
+   <binding>
+    <command>nasal</command>
+    <script>controls.gearDown(-1)</script>
+   </binding>
+  </low>
+  <high>
+   <repeatable>false</repeatable>
+   <binding>
+    <command>nasal</command>
+    <script>controls.gearDown(1)</script>
+   </binding>
+  </high>
+ </axis>
+
+ <axis n="5">
+  <desc>Flaps</desc>
+  <!--
+  <medium> -->
+   <repeatable>false</repeatable>
+   <binding>
+    <command>nasal</command>
+    <script>setprop("/controls/flight/flaps", 0)</script>
+   </binding>
+  <!--
+  </medium> -->
+  <high>
+   <repeatable>false</repeatable>
+   <binding>
+    <command>nasal</command>
+    <script>setprop("/controls/flight/flaps", 1)</script>
+   </binding>
+  </high>
+ </axis>
+
+
+</PropertyList>
