@@ -162,9 +162,6 @@ def readRCreceiver(ser, joy):
 			#print (data) # TODO: remove (debug)
 
 
-lastlastData = numChannels * [127]
-lastData     = numChannels * [127]
-holdLastData = numChannels * [False]
 def processData(data):
 	global lastlastData, lastData, holdLastData
 	data = list(data)
@@ -257,6 +254,11 @@ if __name__ == "__main__":
 	useCompositePPM = args.useCompositePPM
 	doubleSweep = args.doubleSweep
 	useDummyJoystick = args.useDummyJoystick
+	
+	# Filtering init
+	lastlastData = numChannels * [127]
+	lastData     = numChannels * [127]
+	holdLastData = numChannels * [False]
 
 	if useCompositePPM:
 		print ("PPM input is not yet implemented. Using channels instead.")
