@@ -113,13 +113,60 @@ Make sure the following dependencies are installed on your computer:
 
 == Software ==
 
-  * Execute the `serialToJoystick.py` program with the appropriate command-line arguments (*TODO*), e.g. by running 
+  * Execute the `serialToJoystick.py` program with the appropriate command-line arguments (e.g. 4 channels), by running 
 {{{
-$ python serialToJoystick.py
+$ python serialToJoystick.py -c 4
 }}}
-  in that directory. Note: you may have to execute it with root-permissions (as superuser, e.g.: "`sudo python serialToJoystick.py`"), because it creates a virtual joystick device.
-  If the following message shows up in the terminal, you'll be able to use it (it will show up with the name "`<your joystick name>`") in all games supporting joysticks:
+  in that directory, this works on Linux. Note: you may have to execute it with root-permissions (as superuser, e.g.: "`sudo python serialToJoystick.py`"), because it creates an externally accessible virtual joystick device.
+
+  You can also pass some extra options to fit your needs, here is the help message:
+{{{
+$ python serialToJoystick.py --help
+
+usage: serialToJoystick.py [-h] -c, --num-channels {1,2,3,4,5,6,7,8}
+                           [-n, --name CONTROLLERNAME]
+                           [-d, --device ARDUINODEVICE] [-p, --use-ppm]
+                           [-D, --double-sweep] [-t, --test]
+
+Creates a virtual joystick controller using data from a RC receiver via an
+Arduino. Go to http://code.google.com/p/rx-joystick-arduino/ for more info.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -c, --num-channels {1,2,3,4,5,6,7,8}
+                        the exact amount of channels used
+  -n, --name CONTROLLERNAME
+                        the name of the virtual joystick, how it will appear
+                        to other applications, if not provided, autogeneration
+                        will occur
+  -d, --device ARDUINODEVICE
+                        the device path of the Arduino, on Linux usually
+                        something like '/dev/ttyACM0', if not provided,
+                        autodetection will be performed
+  -p, --use-ppm         use one PPM stream as input to capture all channels,
+                        instead of using multiple channel streams
+  -D, --double-sweep    double the range of all channels, resolution will be
+                        halved
+  -t, --test            print and visualise every controller event update,
+                        don't create an externally accessible virtual joystick
+}}}
+
+  _Example on Windows:_
+
+  The following command will visualise (test) controller events with a RC receiver with 2 channels connected to the Arduino (no PPM input). Let's assume we know that the Arduino is located at `COM4`.
+{{{
+$ python serialToJoystick.py -c 2 -d COM4 -t
+}}}
+  The output will look like:
+{{{
+#### Incoming Joystick 'RC Receiver (2chs)' Event: ####
+# Axis 0 [--------o--------] 127 (50%)
+# Axis 1 [--------o--------] 127 (50%)
+}}}
+
+  Concluding, if all went right, the following message shows up in the terminal, you'll be able to use it (it will show up with the name "`<your joystick name>`") in all games supporting joysticks:
 {{{
 Created a joystick device named '<your joystick name>'.
 }}}
   * Start a game or application that uses this joystick, and enjoy!
+  * To stop the joystick, send a KeyboardInterrupt in the terminal where `serialToJoystick.py` is running by pressing `Ctrl-C`.
