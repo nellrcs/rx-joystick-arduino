@@ -36,6 +36,7 @@ def connectToArduino():
 			arduinoDevice = list(list_ports.grep(dmesgOutput[ttyBegin:ttyEnd]))[0][0]
 		except:
 			print ("Could not automatically find your Arduino device.")
+			return None
 	
 	ser = serial.Serial(
 			port = arduinoDevice,
@@ -197,7 +198,7 @@ def main():
 
 	try:
 		ser = connectToArduino()
-		if connectToRCreceiver(ser):
+		if ser and connectToRCreceiver(ser):
 			joy = createJoystick()
 			if joy:
 				startTime = time.time()
