@@ -170,3 +170,10 @@ Created a joystick device named '<your joystick name>'.
 }}}
   * Start a game or application that uses this joystick, and enjoy!
   * To stop the joystick, send a `KeyboardInterrupt` in the terminal where `serialToJoystick.py` is running by pressing `Ctrl-C`.
+
+=== Games, configuration files ===
+
+Joystick configuration files for various applications are released under "/Software/Computer/ThirdPartyConfigurations/".
+
+Currently available:
+  * Flightgear
