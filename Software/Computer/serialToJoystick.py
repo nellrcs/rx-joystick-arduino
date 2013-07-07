@@ -118,10 +118,11 @@ def createJoystick():
 		joy = UInputJoystick(numChannels, name = controllerName)
 		print ("Created a joystick device named '%s'." % controllerName)
 		return joy
-	def createDummyJoystick():
+	def createDummyJoystick(fallback = False):
 		joy = DummyJoystick(numChannels, name = controllerName)
-		print ("Failed to create a joystick device,")
 		print ("I'll create a dummy one named '%s', it will print all inputs." % controllerName)
+		if fallback:
+			raw_input ("\nPress ENTER to continue. ")
 		return joy
 	
 	if useDummyJoystick:
@@ -130,7 +131,8 @@ def createJoystick():
 	try:
 		return createUInputJoystick()
 	except OSError:
-		return createDummyJoystick()
+		print ("Failed to create a joystick device,")
+		return createDummyJoystick(True)
 
 
 def readRCreceiver(ser, joy):
