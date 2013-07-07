@@ -173,7 +173,8 @@ Created a joystick device named '<your joystick name>'.
 
 === Games, configuration files ===
 
-Joystick configuration files for various applications are released under "/Software/Computer/ThirdPartyConfigurations/".
+Joystick configuration files for various applications are released under "`/Software/Computer/ThirdPartyConfigurations/`".
+Look in the folder corresponding with an application for the "`Readme.txt`" file to get more info/instructions.
 
 Currently available:
   * Flightgear
