@@ -9,7 +9,7 @@ packetCounter = 0
 
 # Default command-line argument values
 controllerName = None
-numChannels = 2
+numChannels = 0
 arduinoDevice = None
 doubleSweep = False
 useCompositePPM = False
@@ -56,13 +56,32 @@ def connectToArduino():
 
 
 def connectToRCreceiver(ser):
-	command = ((numChannels-1) << 2) + (doubleSweep << 1) + useCompositePPM
+	global numChannels
+	command = (numChannels << 2) + (doubleSweep << 1) + useCompositePPM
 	
 	numRetries = 4
 	for i in range(numRetries):
 		ser.write(chr(command) + "\n")
 		response = ser.readline()
-		valid = (len(response) == 1 + 2 and response == chr(command) + "\r\n") # echo command + CR + NL
+		valid = (len(response) == 1 + 2 and response[1:3] == "\r\n")
+		if valid:
+			response = ord(response[0])
+			if numChannels:
+				valid = (response == command)
+			else:
+				numChannels_received = response >> 2
+				doubleSweep_received = response & 2
+				useCompositePPM_received = response & 1
+				valid = ((doubleSweep_received, useCompositePPM_received) == (doubleSweep, useCompositePPM))
+				if valid:
+					valid = (1 <= numChannels_received <= 8)
+					if valid:
+						numChannels = numChannels_received
+					else:
+						if not numChannels_received:
+							print ("Autodetection of amount of channels failed, \nmake sure you're RC transmitter is powered on.")
+						else:
+							print ("Autodetection of amount of channels is assumed to be faulty, since it's greater that 8.")
 		if valid:
 			break
 	
@@ -165,6 +184,13 @@ def readRCreceiver(ser, joy):
 			#print (data) # TODO: remove (debug)
 
 
+def initFilter():
+	global lastlastData, lastData, holdLastData
+	lastlastData = numChannels * [127]
+	lastData     = numChannels * [127]
+	holdLastData = numChannels * [False]
+
+
 def processData(data):
 	global lastlastData, lastData, holdLastData
 	data = list(data)
@@ -201,6 +227,7 @@ def main():
 		if ser and connectToRCreceiver(ser):
 			joy = createJoystick()
 			if joy:
+				initFilter()
 				startTime = time.time()
 				readRCreceiver(ser, joy)
 	
@@ -232,8 +259,8 @@ if __name__ == "__main__":
 		'Go to http://code.google.com/p/rx-joystick-arduino/ for more info.')
 		
 	parser.add_argument('-c, --num-channels', dest = 'numChannels', action = 'store',
-		default = numChannels, required = True, type = int, choices = xrange(1, 1+8),
-		help = 'the exact amount of channels used')
+		default = numChannels, type = int, choices = xrange(0, 1+8),
+		help = "the exact amount of channels used, if not provided or '0' is used, autodetection will be performed")
 
 	parser.add_argument('-n, --name', dest = 'controllerName', action = 'store',
 			default = controllerName,
@@ -258,10 +285,7 @@ if __name__ == "__main__":
 	doubleSweep = args.doubleSweep
 	useDummyJoystick = args.useDummyJoystick
 	
-	# Filtering init
-	lastlastData = numChannels * [127]
-	lastData     = numChannels * [127]
-	holdLastData = numChannels * [False]
+	
 
 	if useCompositePPM:
 		print ("PPM input is not yet implemented. Using channels instead.")
