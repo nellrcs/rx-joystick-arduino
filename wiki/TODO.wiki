@@ -4,7 +4,6 @@
   * Release a downloadable package, for now, you can checkout the code using svn.
   * Implement PPM reading from BAT signal port on receiver or DSC port on transmitter (Arduino side)
   This has not been done yet because my receivers don't output PPM on the BAT signal port (instead, it is connected to the ground), and I have no DSC cable.
-  * Allow automatic detection of amount of available channels.
   * Implementation of externally accessible (in other applications) virtual joysticks on operating systems that do not use uinput (like `MacOs` or Windows).
   * Make the automatic Arduino detection platform independent
   Currently this works only on Linux, it may also work on `MacOs`, but that is not tested.
