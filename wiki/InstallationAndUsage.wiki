@@ -123,7 +123,7 @@ $ python serialToJoystick.py -c 4
 {{{
 $ python serialToJoystick.py --help
 
-usage: serialToJoystick.py [-h] -c, --num-channels {1,2,3,4,5,6,7,8}
+usage: serialToJoystick.py [-h] [-c, --num-channels {0,1,2,3,4,5,6,7,8}]
                            [-n, --name CONTROLLERNAME]
                            [-d, --device ARDUINODEVICE] [-p, --use-ppm]
                            [-D, --double-sweep] [-t, --test]
@@ -133,8 +133,9 @@ Arduino. Go to http://code.google.com/p/rx-joystick-arduino/ for more info.
 
 optional arguments:
   -h, --help            show this help message and exit
-  -c, --num-channels {1,2,3,4,5,6,7,8}
-                        the exact amount of channels used
+  -c, --num-channels {0,1,2,3,4,5,6,7,8}
+                        the exact amount of channels used, if not provided or
+                        '0' is used, autodetection will be performed
   -n, --name CONTROLLERNAME
                         the name of the virtual joystick, how it will appear
                         to other applications, if not provided, autogeneration
