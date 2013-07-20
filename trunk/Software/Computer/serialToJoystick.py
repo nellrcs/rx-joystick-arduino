@@ -26,17 +26,23 @@ PPM_Period = 22e-3 # 22ms
 def connectToArduino():
 	# TODO: make this OS independant
 	global arduinoDevice
+	def fail():
+		print ("Could not automatically find your Arduino device.")
+		return None
 	if not arduinoDevice:
 		try:
 			from serial.tools import list_ports
 			dmesgOutput = os.popen("dmesg").read()
 			lastOccurence = dmesgOutput.rfind("Arduino")
+			if lastOccurence == -1:
+				return fail()
 			ttyBegin = dmesgOutput.find("tty", lastOccurence)
+			if ttyBegin == -1:
+				return fail()
 			ttyEnd = min([dmesgOutput.find(c, ttyBegin) for c in (':', ' ', '\t', '\r', '\n') if c in dmesgOutput[ttyBegin:]])
 			arduinoDevice = list(list_ports.grep(dmesgOutput[ttyBegin:ttyEnd]))[0][0]
 		except:
-			print ("Could not automatically find your Arduino device.")
-			return None
+			return fail()
 	
 	ser = serial.Serial(
 			port = arduinoDevice,
