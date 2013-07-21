@@ -113,9 +113,9 @@ Make sure the following dependencies are installed on your computer:
 
 == Software ==
 
-  * Execute the `serialToJoystick.py` program with the appropriate command-line arguments (e.g. 4 channels), by running 
+  * Execute the `serialToJoystick.py` program with minimal command-line arguments (Arduino device will be auto-detected, as well as the amount of channels connected), by running 
 {{{
-$ python serialToJoystick.py -c 4
+$ python serialToJoystick.py
 }}}
   in that directory, this works on Linux. Note: you may have to execute it with root-permissions (as superuser, e.g.: "`sudo python serialToJoystick.py`"), because it creates an externally accessible virtual joystick device.
 
