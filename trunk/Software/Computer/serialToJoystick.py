@@ -70,26 +70,32 @@ def connectToRCreceiver(ser):
 		ser.write(chr(command) + "\n")
 		response = ser.readline()
 		valid = (len(response) == 1 + 2 and response[1:3] == "\r\n")
-		if valid:
-			response = ord(response[0])
-			if numChannels:
-				valid = (response == command)
+		if not valid:
+			continue
+		response = ord(response[0])
+		if numChannels:
+			# Manual channel amount
+			valid = (response == command)
+			if not valid:
+				continue
+		else:
+			# Automatic channel amount
+			numChannels_received = response >> 2
+			doubleSweep_received = response & 2
+			useCompositePPM_received = response & 1
+			valid = ((doubleSweep_received, useCompositePPM_received) == (doubleSweep, useCompositePPM))
+			if not valid:
+				continue
+			valid = (1 <= numChannels_received <= 8)
+			if valid:
+				numChannels = numChannels_received
+				print ("Autodetected %s channel(s)." % numChannels)
 			else:
-				numChannels_received = response >> 2
-				doubleSweep_received = response & 2
-				useCompositePPM_received = response & 1
-				valid = ((doubleSweep_received, useCompositePPM_received) == (doubleSweep, useCompositePPM))
-				if valid:
-					valid = (1 <= numChannels_received <= 8)
-					if valid:
-						numChannels = numChannels_received
-					else:
-						if not numChannels_received:
-							print ("Autodetection of amount of channels failed, \nmake sure you're RC transmitter is powered on.")
-						else:
-							print ("Autodetection of amount of channels is assumed to be faulty, since it's greater that 8.")
-		if valid:
-			break
+				if not numChannels_received:
+					print ("Autodetection of amount of channels failed, \nmake sure you're RC transmitter is powered on.")
+				else:
+					print ("Autodetection of amount of channels is assumed to be faulty, since it's greater that 8.")
+		break
 	
 	if not valid:
 		print ("Failed to connect to RC receiver via Arduino on '%s'." % arduinoDevice)
@@ -227,23 +233,8 @@ def writeJoystick(joy, data):
 
 def main():
 	ser = joy = None
-
-	try:
-		ser = connectToArduino()
-		if ser and connectToRCreceiver(ser):
-			joy = createJoystick()
-			if joy:
-				initFilter()
-				startTime = time.time()
-				readRCreceiver(ser, joy)
 	
-	except serial.serialutil.SerialException:
-		print ("Failed to connect to Arduino on '%s'." % arduinoDevice)
-	
-	except KeyboardInterrupt:
-		pass
-	
-	finally:
+	def finalize():
 		endTime = time.time()
 		
 		if ser:
@@ -257,6 +248,26 @@ def main():
 			print ("%s packets captured (%s%%)" % (packetCounter, int(100 * packetCounter/expectedNbPackets)))
 		
 		print ("Connections closed.")
+
+	try:
+		ser = connectToArduino()
+	except serial.serialutil.SerialException:
+		print ("Failed to connect to Arduino on '%s'." % arduinoDevice)
+		return finalize()
+
+	if ser and connectToRCreceiver(ser):
+		joy = createJoystick()
+		if joy:
+			initFilter()
+			startTime = time.time()
+			try:
+				readRCreceiver(ser, joy)
+			except serial.serialutil.SerialException:
+				print ("Arduino device has been disconnected.")
+			except KeyboardInterrupt:
+				pass
+			finally:
+				return finalize()
 
 if __name__ == "__main__":
 	import argparse
