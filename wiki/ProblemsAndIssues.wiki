@@ -57,7 +57,7 @@ But if someone has, please mail me if you're interested to contribute some code 
 
 === "Ok, nice, but where can I download all stuff?" ===
 
-# Go to the "`Project Home`" tab above and click on it.
-# You can *download* a release by clicking below on "`Downloads`" under the `External links` section in the the left navigation area.
+  # Go to the "`Project Home`" tab above and click on it.
+  # You can *download* a release by clicking below on "`Downloads`" under the `External links` section in the the left navigation area.
 
 It contains all required files for the `Software` and `Hardware` components.
