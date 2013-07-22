@@ -54,3 +54,9 @@ This can be solved by extending the filter to also affect lower frequencies, but
 
 The code on the Arduino side supporting PPM input, is not yet implemented: I don't have a receiver with PPM output I can test with.
 But if someone has, please mail me if you're interested to contribute some code on that.
+
+=== "Ok, nice, but where can I download all stuff?" ===
+
+<-- You can *download* a release by clicking below on "`Downloads`" under the `External links` section in the the left navigation area.
+
+It contains all required files for the `Software` and `Hardware` components.
