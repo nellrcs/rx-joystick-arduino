@@ -1,14 +1,13 @@
 #summary TODO
 #labels Phase-Implementation
 
-  * Release a downloadable package, for now, you can checkout the code using svn.
   * Implement PPM reading from BAT signal port on receiver or DSC port on transmitter (Arduino side)
   This has not been done yet because my receivers don't output PPM on the BAT signal port (instead, it is connected to the ground), and I have no DSC cable.
   * Implementation of externally accessible (in other applications) virtual joysticks on operating systems that do not use uinput (like `MacOs` or Windows).
+  * Improve the quantization noise filter.
   * Make the automatic Arduino detection platform independent
   Currently this works only on Linux, it may also work on `MacOs`, but that is not tested.
-  * Test with more receivers (currently tested with Graupner JR `R700` and Futaba R142JE)
-  * Improve the quantization noise filter.
   * Improve performance on the computer-side
   On an Intel i5, the program uses 0.8% of one cpu core, which is much IMO, given that the functions used of the python `serial` module are interrupt-based.
   * Make more use of OO programming in the python code
+  * Test with more receivers (currently tested with Graupner JR `R700` and Futaba R142JE)
