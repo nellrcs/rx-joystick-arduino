@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!--
-Run 'python serialToJoystick.py -c 4' (may need to be run as root) to connect to the RC receiver and create the joystick device.
+Run 'python serialToJoystick.py -c 4' (may need to be run as root) to connect to the RC transmitter/receiver and create the joystick device.
 More info on http://code.google.com/p/rx-joystick-arduino/
 
 Tested with "Graupner JR mx-12" as transmitter and "Graupner JR R700" as receiver.
@@ -16,7 +16,8 @@ Linux/Windows/Mac Axis Numbers:
 $Id$
 -->
 <PropertyList>
- <name>RC Receiver (6chs)</name>
+ <name>RC Controller (PWM mode) (4chs)</name>
+ <name>RC Controller (PPM mode) (4chs)</name>
 
  <name>Graupner mx-12</name> <!-- tested -->
  <name>Graupner JR mx-12</name>
