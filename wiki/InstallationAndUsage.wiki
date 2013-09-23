@@ -113,7 +113,7 @@ Make sure the following dependencies are installed on your computer:
 
 == Software ==
 
-  * Execute the `serialToJoystick.py` program with minimal command-line arguments (Arduino device will be auto-detected, as well as the amount of channels connected), by running 
+  * Execute the `serialToJoystick.py` program with minimal command-line arguments (Arduino device will be auto-detected, as well as the amount of channels connected, PWM/PPM mode, and period), by running 
 {{{
 $ python serialToJoystick.py
 }}}
