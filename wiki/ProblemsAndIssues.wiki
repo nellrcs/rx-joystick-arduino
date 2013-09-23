@@ -43,23 +43,17 @@ You can solve this by manually specifying the device-name as an argument in the 
 
 This is caused by the timing resolution (granularity => quantization noise) of the Arduino, which is 4us on the 16 MHz editions, and 8us on the 8 Mhz editions. The inverse of this time gives the sampling frequency.
 
-To address this problem, a non-linear low-pass filter is used, that acts as a linear low-pass filter when the position of the controls is not changed.
-This filter filters noise situated at the sampling frequency.
+To address this problem, an enhanced fuzz-flat filter is used. The higher the "fuzz" parameter is set, the less noise the output will contain. However, setting this parameter too high, will cause the output to be unresponsive and laggy when the controls are changed.
 
-This delivers better results, but as this phenomenon is really quantization noise (present at all (relevant) frequencies), there is still some noise left.
-This can be solved by extending the filter to also affect lower frequencies, but be aware that this might have bad effects on the dynamic response (e.g. delay).
-
-
-=== "I'm correctly using my transmitter's PPM/DSC port, but the virtual joystick does not report valid values." ===
-
-The code on the Arduino side supporting PPM input, is not yet implemented, but it is work in progress and will be released soon.
+6 adjacent values of "fuzz", proves to be a good filtering parameter.
+If 1 value of "fuzz" is used, the filter doesn't have any effect, so the resulting data is unfiltered.
 
 
 === "Using PPM output does not work: the peak-to-peak signal is only ~1 Volt (instead of 5 Volts)." ===
 
 You can build a little circuit that cranks the low value up to ~2 Volts or one that cranks the high value up to ~3 Volts.
 
-I needed to do the latter for the Graupner MX-12.
+I needed to do the latter for the Graupner MX-12, and the following circuit is tested and works (although I know it seems counter-intuitive that there is actually 2.2V on the + side of transmitter, that's probably because the model used for the PPM signal source is not exact.)
 This is the circuit I used:
 
 [http://rx-joystick-arduino.googlecode.com/svn/trunk/Hardware/PPMAnalysis/LowVoltageSweepFix_schema.png]
