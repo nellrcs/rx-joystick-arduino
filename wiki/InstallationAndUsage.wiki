@@ -123,19 +123,32 @@ $ python serialToJoystick.py
 {{{
 $ python serialToJoystick.py --help
 
-usage: serialToJoystick.py [-h] [-c, --num-channels {0,1,2,3,4,5,6,7,8}]
+usage: serialToJoystick.py [-h] [-m, --mode {-1,0,1}]
+                           [-c, --num-channels {0,1,2,3,4,5,6,7,8}]
+                           [-f, --filtering-fuzz {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16}]
                            [-n, --name CONTROLLERNAME]
-                           [-d, --device ARDUINODEVICE] [-p, --use-ppm]
-                           [-D, --double-sweep] [-t, --test]
+                           [-d, --device ARDUINODEVICE] [-D, --double-sweep]
+                           [-t, --test]
 
 Creates a virtual joystick controller using data from a RC receiver via an
 Arduino. Go to http://code.google.com/p/rx-joystick-arduino/ for more info.
 
 optional arguments:
   -h, --help            show this help message and exit
+  -m, --mode {-1,0,1}   the type of source we'll be capturing from: '0': use
+                        multiple separate PWM channel inputs (from receiver
+                        outputs); '1': use one combined PPM input (e.g. from
+                        transmitter's D.S.C. output) as input to capture all
+                        channels; if not provided or '-1' is used,
+                        autodetection will be performed, PWM mode has the
+                        highest priority
   -c, --num-channels {0,1,2,3,4,5,6,7,8}
                         the exact amount of channels used, if not provided or
                         '0' is used, autodetection will be performed
+  -f, --filtering-fuzz {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16}
+                        the number of adjacent values that are result of
+                        quantization noise, if '1' is used, no filtering will
+                        be performed; default value is '6'
   -n, --name CONTROLLERNAME
                         the name of the virtual joystick, how it will appear
                         to other applications, if not provided, autogeneration
@@ -144,8 +157,6 @@ optional arguments:
                         the device path of the Arduino, on Linux usually
                         something like '/dev/ttyACM0', if not provided,
                         autodetection will be performed
-  -p, --use-ppm         use one PPM stream as input to capture all channels,
-                        instead of using multiple channel streams
   -D, --double-sweep    double the range of all channels, resolution will be
                         halved
   -t, --test            print and visualise every controller event update,
